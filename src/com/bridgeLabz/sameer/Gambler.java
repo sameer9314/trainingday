@@ -1,3 +1,5 @@
+package com.bridgeLabz.sameer;
+
 /******************************************************************************
 
  *  
@@ -8,18 +10,29 @@
  *  @since   17-05-2018
  *
  ******************************************************************************/
-package com.bridgeLabz.sameer;
-
 public class Gambler {
 	
 	/*
-	 * The main function is written to take the inputs for $Stake, $Goal, number of times to play.
-	 * And to determines number of Wins and the Percentage of Win and Loss
+	 * Static Variable is declared to count the number of times of Wins.
 	 */
+	static double mstakeWinCount=0;
+	
+	/*
+	 * Static Variable is declared to count the number of times of Loss.
+	 */
+	static double mstakeLossCount=0;
 	public static void main(String[] args) {
-		
+		// Utility object created
 		Utility obj=new Utility();
-		obj.gamblerMethod();
+		
+		System.out.println("Enter Your Stake");
+		int stake=Utility.getInt();
+		System.out.println("Enter Your Goal");
+		int goal=Utility.getInt();
+		System.out.println("Mention how many times you want to play this game");
+		int numberOfTimes=Utility.getInt();
+		
+		obj.playGambler(stake,goal,numberOfTimes);
 	}
 
 }

@@ -1,25 +1,20 @@
-/******************************************************************************
+package com.bridgeLabz.sameer;
 
- *   hihahahahah
- *  Purpose: Determines Percentage of Heads and Tails.
+/******************************************************************************
+ * 
+ *  Purpose: Determines Percentage of Heads vs Tails.
  *
  *  @author  Sameer Saurabh
  *  @version 1.0
  *  @since   17-05-2018
  *
  ******************************************************************************/
-package com.bridgeLabz.sameer;
-
 public class FlipCoin {
-	
-	/*
-	 * The main function to calculate the Percentage of Heads vs Tails
-	 */
 	public static void main(String[] args) {
-	   
+	   //Creating Utility Object
 	   Utility obj=new Utility();
-	   
-	   obj.flipCoinMethod();
+	   System.out.println("Enter the number , how many times you want to Flip the coin ?");
+	   int n=Utility.getInt();
+	   obj.findPercentage(n);
 	}
-
 }

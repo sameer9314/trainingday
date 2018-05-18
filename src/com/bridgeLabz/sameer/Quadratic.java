@@ -1,22 +1,25 @@
 package com.bridgeLabz.sameer;
 
 /******************************************************************************
-
- *  
- *  Purpose: To print the harmonic value of nth term..
+ * 
+ *  Purpose: Determines the roots of the Quadratic equation.
  *
  *  @author  Sameer Saurabh
  *  @version 1.0
  *  @since   17-05-2018
  *
  ******************************************************************************/
-public class HarmonicValue {
+public class Quadratic {
 	public static void main(String[] args) {
-	   // Utility object created	
-	   Utility obj=new Utility();
-	   System.out.println("ENTER THE VALUE OF N TO FIND THE HARMONIC VALUE");
-	   int n=Utility.getInt();
-	   obj.findHarmonicValue(n);
-	}
+		// Creating Utility object
+		Utility obj=new Utility();
+		int a=Utility.getInt();
+	    int b=Utility.getInt();
+	    int c=Utility.getInt();
 
+	   obj.findQuadraticRoots(a,b,c);
+
+	}
+	
+	
 }

@@ -1,3 +1,5 @@
+package com.bridgeLabz.sameer;
+
 /******************************************************************************
 
  *  
@@ -8,18 +10,12 @@
  *  @since   17-05-2018
  *
  ******************************************************************************/
-package com.bridgeLabz.sameer;
-
-
 public class PrimeFactor {
-	
-	/*
-	 * The main function is written to find the Prime factors of given number.
-	 * 
-	 */
 	public static void main(String[] args) {
+		// Utility object created
 		Utility obj=new Utility();
-		obj.primeFactorMethod();
+		System.out.println("ENTER THE NUMBER TO FIND THE PRIME FACTORS");
+		int num=Utility.getInt();
+		obj.findPrimeFactor(num);
 	}
-
 }

@@ -1,3 +1,5 @@
+package com.bridgeLabz.sameer;
+
 /******************************************************************************
 
  *  
@@ -7,18 +9,13 @@
  *  @since   17-05-2018
  *
  ******************************************************************************/
-package com.bridgeLabz.sameer;
-
 public class LeapYear {
-	
-	/*
-	 * The main function to find whether year is leap or not
-	 * 
-	 */
 	public static void main(String[] args) {
-		 
+		//Creating Utility Object
 	    Utility obj=new Utility();
-		obj.leapYearMethod();
+	    System.out.println("Enter the year to check");
+		int year=Utility.getInt();
+	    obj.findLeapYear(year);
 	}
 }
 

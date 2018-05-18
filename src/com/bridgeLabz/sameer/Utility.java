@@ -9,69 +9,50 @@
  *
  ******************************************************************************/
 package com.bridgeLabz.sameer;
-
-import java.util.Random;
 import java.util.Scanner;
+import java.util.Random;
+
 
 public class Utility {
-	 
-
-	/*
-	 * Static Variable is declared to count the number of distinct elements added to array.
-	 */
-	static int distinctElementcount=0;
 	
-	/*
-	 * Static Variable is declared to count the number of times of Wins.
-	 */
-	static double mstakeWinCount=0;
+	// private constructor to create scanner object;
+	private static Scanner scnObj=null;
+	Utility(){		
+	scnObj=new Scanner(System.in);
+	}
 	
-	/*
-	 * Static Variable is declared to count the number of times of Loss.
-	 */
-	static double mstakeLossCount=0;
 	
+	
+	
+/*******************************************************************************************************************************/	
 		/*
 	    * Function to calculate the Percentage of Heads vs Tails.
 	    *
-	    * @param number the number to flip the coins for number times.
+	    * @param n the integer to flip the coins for n times.
 	    */
-		void flipCoinMethod(){
-		   
-		   Scanner sc=new Scanner(System.in);
-		   System.out.println("Enter the number of times to Flip the coin");
-		   int n=sc.nextInt();
+		void findPercentage(int n){
 		   int tails=0;
 	       int heads=0;
-		   
 		   for(int i=1;i<=n;i++) {
 	          double value=Math.random();
-	          
-	          if(value<0.5) {
-	        	  tails++;
-	          }
+	          		if(value<0.5) {
+	          			tails++;
+	          		}
 	          else {
 	        	  heads++;
 	          }
-	        	  
-		   }
+	       }
 		   double per=(heads*100)/n;
-		   System.out.println("PERCENTAGE OF HEAD vs TAILS "+per);
-		   sc.close();
+		   System.out.println("PERCENTAGE OF HEAD vs TAILS is : "+per);
+		   scnObj.close();
 	    }
-		
+/*******************************************************************************************************************************/		
 		/*
 		    * Function to find whether year is leap or not.
 		    *
-		    * @param number the number to find the leap year.
+		    * @param year the integer to find the leap year.
 		    */
-		void leapYearMethod() {
-			
-			Scanner sc=new Scanner(System.in);
-			
-		    System.out.println("Enter the year to check");
-			int year=sc.nextInt();	
-			
+		void findLeapYear(int year) {
 			if(year>999 && year<=9999) {
 		         if( (year%4==0 && year%100!=0) || (year%100==0 && year%400==0) ) {
 		            System.out.println("Leap Year");
@@ -83,15 +64,15 @@ public class Utility {
 		     else {
 		    	  System.out.println("NOT A VALID YEAR");
 		     }	 
-			 sc.close();
+			scnObj.close();
 		}
-		
+/******************************************************************************************************************************/		
 		/*
-		    * Function to print the power of table 2.
+		    * Function to print the power of table 2.  
 		    *
-		    * @param number the number to print the power of table 2 till number.
+		    * @param n the number to print the power of table 2 till n.
 		    */
-		void powerOf2Method(int n) {
+		void generateTableOfPower2(int n) {
 		   int value=1;		
 	       for(int i=1;i<=n;i++) {
 	    	  for(int j=1;j<=i;j++) {
@@ -101,156 +82,271 @@ public class Utility {
 	         value=1;
 	      }
 	    }
-		
+/******************************************************************************************************************************/		
 		/*
 		    * Function to find the harmonic value of nth term.
 		    *
-		    * @param number the number to find the harmonic value till number.
+		    * @param n the number to find the harmonic value till n.
 		    */
-		void harmonicValueMethod() {
-			Scanner sc=new Scanner(System.in);
-			System.out.println("ENTER THE HARMONIC VALUE OF N");
-			
-			int n=sc.nextInt();
-			
+		void findHarmonicValue(int n) {
 			double sum=0;
-			
 			for(double i=1;i<=n;i++) {
 			   sum+=1/i;	   
 		    }
-			   
-		    System.out.print(n+"th HARMONIC VALUE IS "+sum);
-		    sc.close();   
+			System.out.print(n+"th HARMONIC VALUE IS : "+sum);
+		    scnObj.close();   
 		}
-		
+/******************************************************************************************************************************/		
 		/*
 		    * Function to find the Prime factors of given number.
 		    *
-		    * @param number the number to find the prime factor.
+		    * @param num the number to find the prime factor.
 		    */
-		void primeFactorMethod() {
+		void findPrimeFactor(int num) {
 			String s="";
-			
-			Scanner sc=new Scanner(System.in);
-			System.out.println("ENTER THE NUMBER TO FIND THE PRIME FACTORS");
-			int num=sc.nextInt();
 			int newNum=num;
-
-	        for(int i=2;i*i<=newNum;i++) {
+			for(int i=2;i*i<=newNum;i++) {
 			   while(num%i==0) {
 				  num=num/i;
 				  s+=i+" ";
-				
-			   }
+				}
 	        }
 	        if(num>1) {
 	        	s+=num;
 	        }
 			System.out.println("PRIME FACTOR(S) OF "+newNum+" : "+s);
-		    sc.close();
+			scnObj.close();
 		}
-		
+/********************************************************************************************************************************/		
 		/*
 		 *Function is written to determines number of times of Wins and Percentage of Win And Loss
-		 *@param three numbers to take the value of $Stake, $Goal, number of times to play a game
+		 *@param stake to take the stake input.
+		 *@param goal to take the goal input.
+		 *@param numberOfTimes to take the input for number Of Times to play.
 		 */
-		void gamblerMethod(){
-			//Gambler g=new Gambler();
-			Scanner sc=new Scanner(System.in);
-			
-			System.out.println("Enter Your Stake");
-			int stake=sc.nextInt();
-			
-			System.out.println("Enter Your Goal");
-			int goal=sc.nextInt();
-			
-			System.out.println("Mention how many times you want to play this game");
-			int numberOfTimes=sc.nextInt();
-			
+		void playGambler(int stake,int goal,int numberOfTimes){
 			for(int i=1;i<=numberOfTimes;i++) {
-			double generatedRandomNumber=Math.random();
-			
-			if(generatedRandomNumber>0.5) {
-				Utility.mstakeWinCount++;
-				stake++;
-			}
-			else {
-				Utility.mstakeLossCount++;
-				stake--;
-			}
-			if(stake==goal) {
-				break;
-			}
-			else
+				double generatedRandomNumber=Math.random();
+				if(generatedRandomNumber>0.5) {
+					Gambler.mstakeWinCount++;
+					stake++;
+				}
+				else {
+					Gambler.mstakeLossCount++;
+					stake--;
+				}
+				if(stake==goal) {
+					break;
+				}
+				else
 				if(stake==0) {
 					break;
 				}
-		}
-			System.out.println("Number of wins are : "+mstakeWinCount);
-			System.out.println("Wins percentage is : "+(mstakeWinCount*100)/mstakeWinCount+mstakeLossCount);
-			System.out.println("Loss percentage is : "+(mstakeLossCount*100)/mstakeWinCount+mstakeLossCount);
-			sc.close();
+		 }
+			System.out.println("Number of wins are : "+Gambler.mstakeWinCount);
+			System.out.println("Wins percentage is : "+(Gambler.mstakeWinCount*100)/Gambler.mstakeWinCount+Gambler.mstakeLossCount);
+			System.out.println("Loss percentage is : "+(Gambler.mstakeLossCount*100)/Gambler.mstakeWinCount+Gambler.mstakeLossCount);
+			scnObj.close();
 	}
-		
+/****************************************************************************************************************************/
 		/*
-		 *Function is written to get the total random number method  needed to call, to store distinct random number in given array size.
-		 *
+		 *Function is written to get the total number of times
+		 *random number method  needed to call
+		 *to store distinct random number in given array size.
+		 *@param distinctCoupanNumber is to get how many distinct coupan needed to generate.
 		 */	
-		   void coupanNumberMethod() {
-
-		    Scanner sc=new Scanner(System.in);
-			
-		    System.out.println("Enter the value of Distinct coupan numbers");
-		    int distinctCoupanNumber=sc.nextInt();
-			
-		    System.out.println("distinctCoupanNumber is : "+distinctCoupanNumber);
-		    
-		    Random rand = new Random();
-			
-		    int a[]=new int[distinctCoupanNumber];
-		    
-			int rand_int;
-			
-			int arrayIndex=0;
-			
-			int totalRandomNumber=0;
-			
-		  	while(distinctElementcount<distinctCoupanNumber) {
-		  		
-		  		totalRandomNumber++;
-		  		
-		  		rand_int= rand.nextInt(20);
-		  		
-		  		//System.out.println("rand_int is : "+rand_int);
-		  		
-				if(distinctElementcount==0) {
-					a[arrayIndex]=rand_int;
-					arrayIndex++;
-					distinctElementcount++;
-				}
-				else {
-		  		   if( (Utility.checkDistinctElement(a,distinctElementcount,rand_int)==true) ){
-		  			   distinctElementcount++;
-		  			   a[arrayIndex]=rand_int;
-		  			   arrayIndex++;
-		  		   }
-				}	
-			}
-			
-		  	System.out.println("Total random number needed to store "+distinctCoupanNumber+" distinct random numbers in array is : "+totalRandomNumber);
-		  	sc.close();
-		}
-		
+		   void generateCoupan(int distinctCoupanNumber) {
+			  System.out.println("distinctCoupanNumber is : "+distinctCoupanNumber);
+			  Random rand = new Random();
+			  int a[]=new int[distinctCoupanNumber];
+			  int rand_int;
+			  int arrayIndex=0;
+			  int totalRandomNumber=0;
+			  while(CoupanNumber.distinctElementcount<distinctCoupanNumber) {
+		  			totalRandomNumber++;
+		  			rand_int= rand.nextInt(20);
+		  			if(CoupanNumber.distinctElementcount==0) {
+		  				a[arrayIndex]=rand_int;
+		  				arrayIndex++;
+		  				CoupanNumber.distinctElementcount++;
+				    }
+				    else {
+				    	if( (Utility.checkDistinctElement(a,CoupanNumber.distinctElementcount,rand_int)==true) ){
+				    		CoupanNumber.distinctElementcount++;
+				    		a[arrayIndex]=rand_int;
+				    		arrayIndex++;
+				    	}
+				    }	
+		      } 
+			  System.out.println("Total random number needed to store "+distinctCoupanNumber+" distinct random numbers in array is : "+totalRandomNumber);
+		  	  scnObj.close();
+		    }
+/******************************************************************************************************************************/		
 		/*
 		 *Function is written to whether the generated random number is distinct or not.
-		 *@param three variables array, distinctElementcount, generated random number.
+		 *@param array is to get currently initialised elements in array.
+		 *@param distinctElementcount is to know number of distinct element added in array.
+		 *@param  randInt is generated random number.
 		 */	
-		 static boolean checkDistinctElement(int a[],int distinctElementcount,int rand_int) {
+		 static boolean checkDistinctElement(int a[],int distinctElementcount,int randInt) {
 			for(int i=0;i<distinctElementcount;i++) {
-				if(a[i]==rand_int) {
+				if(a[i]==randInt) {
 					return false;
 				}
 			}
 			return true;
+		 }
+/******************************************************************************************************************************/		 
+		 /*
+		  *Function is written to generate one integer number;
+		  */	
+		 static int getInt()
+		 {
+			 return scnObj.nextInt();
+		 }
+/******************************************************************************************************************************/		 
+		 /*
+		  *Function is written to initialise 2D- Array index with integer value
+		  *@param array to initialise its element.
+		  */	
+		 void arrayInit(int[][] a) {
+			 for(int i=0;i<a.length;i++) {
+				 for(int j=0;j<a.length;j++) {
+					 a[i][j]=Utility.getInt();
+				 }
+			 }
+		 }
+/********************************************************************************************************************************/		 
+		 /*
+		  *Function is written to display 2D- Array elements
+		  *@param array to display its elemnts.
+		  */	
+		void displayArray(int[][] a) {
+			System.out.println("Displaying your Array");
+			for(int i=0;i<a.length;i++) {
+			   for(int j=0;j<a.length;j++) {
+				 System.out.print( a[i][j]+" ");
+					  
+			   }
+				   System.out.println();
+		    }
+	    }
+/*********************************************************************************************************************************/		
+		 /*
+		  *Function is written to initialise Array index with integer value
+		  *@param array to initiaise its element.
+		  */	
+		 void arrayInit(int[] a) {
+			 for(int i=0;i<a.length;i++) {
+				 a[i]=Utility.getInt();
+			}
+		 }
+/**********************************************************************************************************************************/		 
+		 /*
+		  *Function is written to display Array elements
+		  *@param array to display its element.
+		  */	
+		void displayArray(int[] a) {
+			System.out.println("Displaying your Array");
+			for(int i=0;i<a.length;i++) {
+			    System.out.print(a[i]+" ");
+		    }
+			System.out.println();
+	    }
+/***********************************************************************************************************************************/		
+		/*
+		  *Function is written to find the number of triplets whose sum is equal to zero.
+		  * And to display triplets combinations and number of triplets.
+		  * 
+		  * @param array to find all the distinct element in the array.
+		  */
+		void findDistinctTriplet(int[] array) {
+			System.out.println("Finding the combination of triplets whose sum is equal to zero......");
+			int tripletCount=0;
+			for(int i=0;i<array.length;i++) {
+				if(i<array.length-2) {
+					for(int j=i+1;j<array.length-1;j++) {
+						for(int k=j+1;k<array.length;k++) {
+							if(array[i]+array[j]+array[k]==0) {
+								tripletCount++;
+								System.out.println(array[i]+" "+array[j]+" "+array[k]+" = "+0);
+							}
+						}
+					}
+				}
+			}
+			if(tripletCount==0) System.out.println("No triplet combination found : ");
+			else System.out.println("Combination found : ");
+			System.out.println("Total number of triplets found is : "+tripletCount);
 		}
+/*************************************************************************************************************************************/		
+		/*
+		  *Function is written to find the Euclidean distance from the given point (x,y) .
+		  * And to display Euclidean distance from the given point.
+		  * 
+		  * @param x and y to get the find the distance from the origin.
+		  */
+		void findDistance(int x,int y) {
+			System.out.println("Euclidean distance from the given point("+x+","+y+") is : "+Math.sqrt(Math.pow(x,2)+Math.pow(y,2)) );
+		}
+/*************************************************************************************************************************************/		
+
+		/*
+		  *Function is written to find  the roots of the quadratic equation.
+		  * And to display Euclidean distance from the given point.
+		  * @param three integer number.
+		  */
+		void findQuadraticRoots(int a,int b,int c)
+		{
+			 double delta=b*b-4*a*c;
+			   
+			    double roots1=(-b+Math.sqrt(delta))/(2*a); 
+			    double roots2=(-b-Math.sqrt(delta))/(2*a);
+			      	
+			    System.out.println("Root 1 of x is :"+roots1);
+			    System.out.println("Root 2 of x is :"+roots2);
+		}
+/*************************************************************************************************************************************/		
+		
+		/*
+		  *Function is written to find the wind chill.
+		  * @param t input for temperature.
+		  * @param v input for wind speed.
+		  */
+		void findWindChill(double t,double v) {
+			   if(t<50 && v<120&&v>3) {
+				  double w=35.74+0.6215*t+(0.4275*t-35.75)*Math.pow(v,0.16);	
+				  System.out.println("Given temperature is : "+t);
+				  System.out.println("Given wind speed is : "+v);
+				  System.out.println("Wind chill is : "+w);
+			   }
+			   else {
+				   System.out.println("Wrong Inputs");
+			   }
+		    }
+/*************************************************************************************************************************************/		
+		/*
+		  *Function is written to find the wind chill.
+		  * @param t input for temperature.
+		  * @param v input for wind speed.
+		  */
+		void findElapsedTime(int choice) {
+	    	long startTime =0;
+	    	long endTime=0;
+	    	int flag=0;
+	    	while(flag==0) {
+	    		switch(choice) {
+	    			case 1 : startTime= System.nanoTime(); // Get the current system time in nano second.
+	    				     System.out.println("Press 0 to stop the Stopwatch");
+	    				     choice=Utility.getInt();
+	    					 break;
+	    					 
+	    			case 0 : endTime= System.nanoTime();   // Get the current system time in nano second.
+	    			         flag=1;
+	    		}
+	    	}
+	    	System.out.println("Start time is : "+startTime);
+	    	System.out.println("End time is : "+endTime);
+	        System.out.println("Elapsed Time is : "+ (endTime - startTime));
+	    }
 }
