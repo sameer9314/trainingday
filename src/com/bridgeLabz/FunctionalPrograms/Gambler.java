@@ -1,4 +1,6 @@
-package com.bridgeLabz.sameer;
+package com.bridgeLabz.FunctionalPrograms;
+
+import com.bridgeLabz.Utility.Utility;
 
 /******************************************************************************
 
@@ -15,12 +17,12 @@ public class Gambler {
 	/*
 	 * Static Variable is declared to count the number of times of Wins.
 	 */
-	static double mstakeWinCount=0;
+	public static double mstakeWinCount=0;
 	
 	/*
 	 * Static Variable is declared to count the number of times of Loss.
 	 */
-	static double mstakeLossCount=0;
+	public static double mstakeLossCount=0;
 	public static void main(String[] args) {
 		// Utility object created
 		Utility obj=new Utility();

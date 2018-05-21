@@ -1,4 +1,6 @@
-package com.bridgeLabz.sameer;
+package com.bridgeLabz.FunctionalPrograms;
+
+import com.bridgeLabz.Utility.Utility;
 
 /******************************************************************************
 *  Purpose: To find the Euclidean distance from the given point (x,y) .	    		 	

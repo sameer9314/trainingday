@@ -1,4 +1,4 @@
-package com.bridgeLabz.sameer;
+package com.bridgeLabz.FunctionalPrograms;
 import java.util.Scanner;
 public class Test {
 public static void main(String[] args) {

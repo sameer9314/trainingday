@@ -1,21 +1,22 @@
-package com.bridgeLabz.sameer;
+package com.bridgeLabz.FunctionalPrograms;
+
+import com.bridgeLabz.Utility.Utility;
 
 /******************************************************************************
-*  Purpose: To permute the given String.    		 	
-* 
+*  Purpose: Replace the <<username>> from the given template.
+
 *  @author  Sameer Saurabh
 *  @version 1.0
 *  @since   17-05-2018
 *
 ******************************************************************************/
-public class PermuteString {
-
+public class ReplaceString {
 	public static void main(String[] args) {
 		//Creating Utility object
 		Utility obj=new Utility();
 		
-		System.out.println("Enter the String you want to permute");
-		obj.findStringPermutation(Utility.getString());
+		System.out.println("Enter user name");
+		String userName=Utility.getString();
+		System.out.println(obj.replaceString(userName));
 	}
-
 }

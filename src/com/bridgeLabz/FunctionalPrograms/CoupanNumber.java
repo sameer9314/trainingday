@@ -1,4 +1,6 @@
-package com.bridgeLabz.sameer;
+package com.bridgeLabz.FunctionalPrograms;
+
+import com.bridgeLabz.Utility.Utility;
 
 /******************************************************************************
 *  Purpose: To get the total number of times
@@ -13,7 +15,7 @@ public class CoupanNumber {
 	/*
 	 * Static Variable is declared to count the number of distinct elements added to array.
 	 */
-	static int distinctElementcount=0;
+	public static int distinctElementcount=0;
 	public static void main(String[] args) {
     	// Utility object created
 		Utility obj=new Utility();

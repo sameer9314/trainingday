@@ -1,4 +1,4 @@
-package com.bridgeLabz.sameer;
+package com.bridgeLabz.FunctionalPrograms;
 
 import java.util.Random;
 

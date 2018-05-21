@@ -1,4 +1,6 @@
-package com.bridgeLabz.sameer;
+package com.bridgeLabz.FunctionalPrograms;
+
+import com.bridgeLabz.Utility.Utility;
 
 /******************************************************************************
 *  Purpose: To print the number of distinct triplets and
@@ -16,9 +18,10 @@ public class DistinctTriplets {
 	System.out.println("Enter the value of N number of integers");
 	int numberOfIntegers=Utility.getInt();
 	int array [] = new int[numberOfIntegers];
-		
-	obj.arrayInit(array);
-	obj.displayArray(array);
+	
+	System.out.println("Enter the elements of an Array");
+	Utility.arrayInit(array);
+	Utility.displayArray(array);
 	
 	System.out.println();
 	obj.findDistinctTriplet(array);
