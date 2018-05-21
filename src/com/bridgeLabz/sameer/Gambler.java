@@ -3,7 +3,7 @@ package com.bridgeLabz.sameer;
 /******************************************************************************
 
  *  
- *  Purpose: Determines Number of Wins and the Percentage of Win and Loss
+ *  Purpose: Determines Number of Wins and the Percentage of Win and Loss.
  *
  *  @author  Sameer Saurabh
  *  @version 1.0

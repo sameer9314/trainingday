@@ -70,7 +70,7 @@ public class Utility {
 		/*
 		    * Function to print the power of table 2.  
 		    *
-		    * @param n the number to print the power of table 2 till n.
+		    * @param n the intger to print the power of table 2 till n.
 		    */
 		void generateTableOfPower2(int n) {
 		   int value=1;		
@@ -86,7 +86,7 @@ public class Utility {
 		/*
 		    * Function to find the harmonic value of nth term.
 		    *
-		    * @param n the number to find the harmonic value till n.
+		    * @param n the integer to find the harmonic value till n.
 		    */
 		void findHarmonicValue(int n) {
 			double sum=0;
@@ -100,7 +100,7 @@ public class Utility {
 		/*
 		    * Function to find the Prime factors of given number.
 		    *
-		    * @param num the number to find the prime factor.
+		    * @param num the integer to find the prime factor.
 		    */
 		void findPrimeFactor(int num) {
 			String s="";
@@ -120,9 +120,10 @@ public class Utility {
 /********************************************************************************************************************************/		
 		/*
 		 *Function is written to determines number of times of Wins and Percentage of Win And Loss
-		 *@param stake to take the stake input.
-		 *@param goal to take the goal input.
-		 *@param numberOfTimes to take the input for number Of Times to play.
+		 *
+		 *@param stake the integer to take the stake input.
+		 *@param goal the integer to take the goal input.
+		 *@param numberOfTimes the integer to take the input for number Of Times to play.
 		 */
 		void playGambler(int stake,int goal,int numberOfTimes){
 			for(int i=1;i<=numberOfTimes;i++) {
@@ -153,7 +154,8 @@ public class Utility {
 		 *Function is written to get the total number of times
 		 *random number method  needed to call
 		 *to store distinct random number in given array size.
-		 *@param distinctCoupanNumber is to get how many distinct coupan needed to generate.
+		 *
+		 *@param distinctCoupanNumber the integer is to get how many distinct coupan needed to generate.
 		 */	
 		   void generateCoupan(int distinctCoupanNumber) {
 			  System.out.println("distinctCoupanNumber is : "+distinctCoupanNumber);
@@ -184,9 +186,10 @@ public class Utility {
 /******************************************************************************************************************************/		
 		/*
 		 *Function is written to whether the generated random number is distinct or not.
-		 *@param array is to get currently initialised elements in array.
-		 *@param distinctElementcount is to know number of distinct element added in array.
-		 *@param  randInt is generated random number.
+		 *
+		 *@param array the integer array to get currently initialised elements in array.
+		 *@param distinctElementcount the integer to know number of distinct element added in array.
+		 *@param  randInt the integer is generate random number.
 		 */	
 		 static boolean checkDistinctElement(int a[],int distinctElementcount,int randInt) {
 			for(int i=0;i<distinctElementcount;i++) {
@@ -198,16 +201,34 @@ public class Utility {
 		 }
 /******************************************************************************************************************************/		 
 		 /*
-		  *Function is written to generate one integer number;
+		  *Function is written to generate one integer number.
 		  */	
 		 static int getInt()
 		 {
 			 return scnObj.nextInt();
 		 }
+ /******************************************************************************************************************************/		 
+		 /*
+		  *Function is written to generate one String.
+		  */	
+		 static String getString()
+		 {
+			 return scnObj.nextLine();
+		 }
+		 
+/******************************************************************************************************************************/		 
+	/*
+	 *Function is written to generate one Char.
+	 */	
+	 static char getChar()
+	 {
+		 return scnObj.next().charAt(0);
+	 }		 		 
 /******************************************************************************************************************************/		 
 		 /*
-		  *Function is written to initialise 2D- Array index with integer value
-		  *@param array to initialise its element.
+		  *Function is written to initialise 2D- Array index with integer value.
+		  *
+		  *@param array the 2-D integer Array  to initialise its element.
 		  */	
 		 void arrayInit(int[][] a) {
 			 for(int i=0;i<a.length;i++) {
@@ -219,7 +240,7 @@ public class Utility {
 /********************************************************************************************************************************/		 
 		 /*
 		  *Function is written to display 2D- Array elements
-		  *@param array to display its elemnts.
+		  *@param array the 2-D integer Array to display its elemnts.
 		  */	
 		void displayArray(int[][] a) {
 			System.out.println("Displaying your Array");
@@ -233,32 +254,33 @@ public class Utility {
 	    }
 /*********************************************************************************************************************************/		
 		 /*
-		  *Function is written to initialise Array index with integer value
-		  *@param array to initiaise its element.
+		  *Function is written to initialise Array index with integer value.
+		  *
+		  *@param array the 1-D integer array to initiaise its element.
 		  */	
 		 void arrayInit(int[] a) {
 			 for(int i=0;i<a.length;i++) {
 				 a[i]=Utility.getInt();
 			}
 		 }
+		 
 /**********************************************************************************************************************************/		 
 		 /*
 		  *Function is written to display Array elements
-		  *@param array to display its element.
+		  *@param array the 1-D integer array to display its element.
 		  */	
 		void displayArray(int[] a) {
 			System.out.println("Displaying your Array");
 			for(int i=0;i<a.length;i++) {
 			    System.out.print(a[i]+" ");
-		    }
-			System.out.println();
-	    }
+			}
+		}	
 /***********************************************************************************************************************************/		
 		/*
 		  *Function is written to find the number of triplets whose sum is equal to zero.
 		  * And to display triplets combinations and number of triplets.
 		  * 
-		  * @param array to find all the distinct element in the array.
+		  * @param array the 1-D Array to find all the distinct triplets element in the array.
 		  */
 		void findDistinctTriplet(int[] array) {
 			System.out.println("Finding the combination of triplets whose sum is equal to zero......");
@@ -284,7 +306,7 @@ public class Utility {
 		  *Function is written to find the Euclidean distance from the given point (x,y) .
 		  * And to display Euclidean distance from the given point.
 		  * 
-		  * @param x and y to get the find the distance from the origin.
+		  * @param x and y the integers to get the find the distance from the origin.
 		  */
 		void findDistance(int x,int y) {
 			System.out.println("Euclidean distance from the given point("+x+","+y+") is : "+Math.sqrt(Math.pow(x,2)+Math.pow(y,2)) );
@@ -294,7 +316,8 @@ public class Utility {
 		/*
 		  *Function is written to find  the roots of the quadratic equation.
 		  * And to display Euclidean distance from the given point.
-		  * @param three integer number.
+		  * 
+		  * @param a,b,c the integers number.
 		  */
 		void findQuadraticRoots(int a,int b,int c)
 		{
@@ -310,8 +333,9 @@ public class Utility {
 		
 		/*
 		  *Function is written to find the wind chill.
-		  * @param t input for temperature.
-		  * @param v input for wind speed.
+		  *
+		  * @param t the integer input for temperature.
+		  * @param v the integer input for wind speed.
 		  */
 		void findWindChill(double t,double v) {
 			   if(t<50 && v<120&&v>3) {
@@ -326,9 +350,10 @@ public class Utility {
 		    }
 /*************************************************************************************************************************************/		
 		/*
-		  *Function is written to find the wind chill.
-		  * @param t input for temperature.
-		  * @param v input for wind speed.
+		  *Function is written to find the elapsed time between starting time and ennding time.
+		  *
+		  * @param t the integer input for temperature.
+		  * @param v thr integer input for wind speed.
 		  */
 		void findElapsedTime(int choice) {
 	    	long startTime =0;
@@ -349,4 +374,52 @@ public class Utility {
 	    	System.out.println("End time is : "+endTime);
 	        System.out.println("Elapsed Time is : "+ (endTime - startTime));
 	    }
+		
+/*************************************************************************************************************************************/		
+		/*
+		  *Function is written to replace the <<username>> from the given template.
+		  *	board[0][0]='x';
+		board[0][0]='x';
+		  * @param  userName the String input for <<username>>.
+		  * 
+		  * @return templates after replacing the <<userName>> from the template with the entered String.
+		  */
+		 String replaceString(String userName) {
+			String template = "Hello <<username>>, How are you?";
+			String output="";
+			if (userName.length() < 3) {
+				System.out.println("username should contain minimum three character atleast !");
+			} 
+			else {
+				output = template.replaceAll("<<username>>", userName);
+			}
+			return output;
+		}
+/*************************************************************************************************************************************/		
+	/*
+	  *Function is written to find all permutation of a given String.
+	  *
+	  * @param  inputString the String input to permute the String.
+	  * 
+	  */		
+		 public  void findStringPermutation(String inputString)
+	        {
+			 findStringPermutation("", inputString);
+	        }
+	     static void findStringPermutation(String permute, String inputString)
+	        {   
+	            if(inputString.length() == 0)
+	            {
+	                System.out.println(permute);
+	            }
+	            else
+	            {
+	                for (int i = 0; i < inputString.length(); i++)
+	                {   
+	                	Utility.findStringPermutation(permute+inputString.charAt(i), inputString.substring(0, i)+inputString.substring(i+1, inputString.length()));
+	                }
+	            }
+	        }	
+/**************************************** TIC TAC TOE *************************************************************************************************/		 
+
 }
