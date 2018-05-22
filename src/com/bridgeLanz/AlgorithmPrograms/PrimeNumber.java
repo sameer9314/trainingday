@@ -2,6 +2,14 @@ package com.bridgeLanz.AlgorithmPrograms;
 
 import com.bridgeLabz.Utility.Utility;
 
+/******************************************************************************
+*  Purpose: To find the Prime Number between 0 and 1000.
+*   
+*  @author  Sameer Saurabh
+*  @version 1.0
+*  @since   22-05-2018
+*
+******************************************************************************/
 public class PrimeNumber {
 	public static void main(String[] args) {
 		//Creating Utility obj

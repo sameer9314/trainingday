@@ -1,11 +1,19 @@
 package com.bridgeLanz.AlgorithmPrograms;
 
-import java.util.Arrays;
 import java.util.Map;
 import java.util.TreeMap;
 
 import com.bridgeLabz.Utility.Utility;
 
+/******************************************************************************
+*  Purpose: To convert elapsed time taken by the searching and sorting method
+*  			And print that elapsed time list in a sorted list by ascending order.
+*   
+*  @author  Sameer Saurabh
+*  @version 1.0
+*  @since   22-05-2018
+*
+******************************************************************************/
 public class SortingElapsedTime {
 
 	public static void main(String[] args) {

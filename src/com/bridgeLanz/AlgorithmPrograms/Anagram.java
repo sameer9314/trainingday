@@ -19,11 +19,16 @@ public class Anagram {
 		String firstString=Utility.getString();
 		System.out.println("Enter the second String");
 		String secondString=Utility.getString();
-
+		
 		firstString=Utility.removeSpace(firstString);
 		secondString=Utility.removeSpace(secondString);
 		
+		
+		
 		if(firstString.length()==secondString.length()) {
+			
+			firstString=Utility.convertLowerCase(firstString);
+			secondString=Utility.convertLowerCase(secondString);
 			
 			firstString=Utility.bubbleSort(firstString);
 			secondString=Utility.bubbleSort(secondString);

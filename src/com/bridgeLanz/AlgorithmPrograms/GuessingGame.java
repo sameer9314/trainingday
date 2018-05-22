@@ -3,22 +3,25 @@ package com.bridgeLanz.AlgorithmPrograms;
 import com.bridgeLabz.Utility.Utility;
 
 /******************************************************************************
-*  Purpose: To find the number which is Prime and Palindrome between 0 and 1000.
+*  Purpose: To find the Guessed number by the user with the help of Binary search algorithm.
 *   
 *  @author  Sameer Saurabh
 *  @version 1.0
 *  @since   22-05-2018
 *
 ******************************************************************************/
-public class PrimeAndPalindrome extends PrimeNumber {
+public class GuessingGame {
+	
 	public static void main(String[] args) {
-		for(int i=0;i<=1000;i++) {
-			if(PrimeNumber.validatingNumber(i)==true) {
-				if( Utility.checkPalindrome(i)==true) {
-					System.out.println(i);
-				}
-			}
-		}
+		//Creating Utility object
+		 Utility obj=new Utility();
 		
+		 int num=Integer.parseInt(args[0]);
+		
+		 int array[]=new int[num];
+		 for(int i=0;i<num;i++) {
+			 array[i]=i;
+		 }
+		 Utility.guessNumber(array,0,array.length-1);
 	}
 }

@@ -1,5 +1,13 @@
 package com.bridgeLanz.AlgorithmPrograms;
 
+/******************************************************************************
+*  Purpose: To find the Monthly payments.
+*   
+*  @author  Sameer Saurabh
+*  @version 1.0
+*  @since   22-05-2018
+*
+******************************************************************************/
 public class MonthlyPayment {
 
 	public static void main(String[] args) {
