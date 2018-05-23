@@ -548,7 +548,7 @@ public class Utility {
 			System.out.println("User win the toss");
 			System.out.println("User will start the game");
 			Utility.userTurn(Tic­Tac­Toe.user);
-		} else if (Tic­Tac­Toe.countValueEntered == 9) {
+		} else {
 			System.out.println("Computer win the toss");
 			System.out.println("Computer will start the game");
 			Utility.compTurn(Tic­Tac­Toe.comp);
@@ -580,8 +580,6 @@ public class Utility {
 				}
 			}
 			Tic­Tac­Toe.valueEntered = false;
-			// && breakPoint==false
-			// System.out.println("countValueEntered : "+countValueEntered);
 			if (Tic­Tac­Toe.countValueEntered < 9) {
 				while (Tic­Tac­Toe.winStatus == false) {
 					Utility.compTurn(Tic­Tac­Toe.comp);
@@ -596,10 +594,7 @@ public class Utility {
 
 	/******************************************************************************************************************************************/
 	public static void compTurn(char comp) {
-		// if(countValueEntered==9) {
-		// System.out.println("Game is Draw");
-		// breakPoint=true;
-		// }
+
 		if (Tic­Tac­Toe.countValueEntered < 9) {
 			while (Tic­Tac­Toe.valueEntered == false) {
 				Random randomNumber = new Random();
@@ -616,8 +611,7 @@ public class Utility {
 				}
 			}
 			Tic­Tac­Toe.valueEntered = false;
-			// && breakPoint==false
-			// System.out.println("countValueEntered : "+countValueEntered);
+
 			if (Tic­Tac­Toe.countValueEntered < 9) {
 				while (Tic­Tac­Toe.winStatus == false) {
 					Utility.userTurn(Tic­Tac­Toe.user);
@@ -680,6 +674,7 @@ public class Utility {
 			Utility.printBoard(board);
 			System.out.println("User wins");
 			System.exit(0);
+
 		} else if (board[0][0] == Tic­Tac­Toe.comp && board[1][0] == Tic­Tac­Toe.comp
 				&& board[2][0] == Tic­Tac­Toe.comp) {
 			Utility.printBoard(board);
@@ -740,7 +735,7 @@ public class Utility {
 	/********************************************
 	 * Algorith Programs
 	 ********************************************/
-	
+
 	/****************************************
 	 * Bubble Sort for String
 	 *********************************************/
@@ -781,11 +776,11 @@ public class Utility {
 	 */
 	public static int[] bubbleSort(int a[]) {
 		for (int i = 0; i < a.length - 1; i++) {
-			for (int j = 0; j < a.length - 1 - i; j++) {
-				if (a[j] > a[j + 1]) {
-					int temp = a[j];
-					a[j] = a[j + 1];
-					a[j + 1] = temp;
+			for (int j = i + 1; j < a.length; j++) {
+				if (a[i] > a[j]) {
+					int temp = a[i];
+					a[i] = a[j];
+					a[j] = temp;
 				}
 			}
 		}
@@ -833,6 +828,7 @@ public class Utility {
 		}
 		return t;
 	}
+
 	/****************************************************************/
 	/*
 	 * Function is written to covert the String into Lower case.
@@ -842,17 +838,17 @@ public class Utility {
 	 * @returntype str is String after converting string into lower case;.
 	 */
 	public static String convertLowerCase(String str) {
-        String s = "";
-        char ch[] = str.toCharArray();
-        for (int i = 0; i < ch.length; i++) {
-            if (ch[i] >= 65 && ch[i] <= 90) {
-                s += (char) (ch[i] + 32);
-            } else {
-                s += ch[i];
-            }
-        }
-    return s;
-    }
+		String s = "";
+		char ch[] = str.toCharArray();
+		for (int i = 0; i < ch.length; i++) {
+			if (ch[i] >= 65 && ch[i] <= 90) {
+				s += (char) (ch[i] + 32);
+			} else {
+				s += ch[i];
+			}
+		}
+		return s;
+	}
 
 	/****************************************
 	 * find Prime Number
@@ -960,15 +956,13 @@ public class Utility {
 		}
 		return s;
 	}
-	
+
 	/****************************************
 	 * Binary Search for integer
 	 ****************************************/
 	/*
 	 * Function is written to perform the binary search on integer array.
 	 *
-	 * 
-	 * 
 	 */
 	public static void binarySearch(int arr[], int first, int last, int key) {
 		// Utility.displayArray(arr);
@@ -1043,6 +1037,9 @@ public class Utility {
 	/*************************************************
 	 * Guessing Number
 	 ****************************************************************************************/
+	/*
+	 * Function is written to guess the number of user by Binary search algorithm.
+	 */
 	public static void guessNumber(int array[], int first, int last) {
 		int mid = (first + last) / 2;
 		System.out.println("Is Your Number present between " + first + " and " + last + "?");
@@ -1080,7 +1077,7 @@ public class Utility {
 	 **************************************************/
 	public static String toBinary(int deciamlValue) {
 		String s = "";
-		String out="";
+		String out = "";
 		int count = 0;
 		while (deciamlValue > 0) {
 			count++;
@@ -1088,16 +1085,16 @@ public class Utility {
 			s = rem + s;
 			deciamlValue = deciamlValue / 2;
 		}
-		for(int i=0;i<8-count;i++) {
-			out+=0;
+		for (int i = 0; i < 8 - count; i++) {
+			out += 0;
 		}
-		s=out+s;
+		s = out + s;
 		return s;
 	}
-	
- /****************************************************************************************/
-public static int findNibbles(String s) {
-		
+
+	/****************************************************************************************/
+	public static int findNibbles(String s) {
+
 		String nibble1 = "";
 		String nibble2 = "";
 		int l = s.length();
@@ -1110,49 +1107,108 @@ public static int findNibbles(String s) {
 		for (int i = l2; i < l; i++) {
 			nibble2 += s.charAt(i);
 		}
-		return Utility.toDecimal(nibble2+nibble1);
+		return Utility.toDecimal(nibble2 + nibble1);
 	}
 
 	public static int toDecimal(String enteredString) {
 		int num = Integer.parseInt(enteredString);
-		int sum=0;
-		for(int i=0;i<enteredString.length();i++) {
-			int rem=num%10;
-			sum+=(rem*(Math.pow(2,i)));
-			num=num/10;
+		int sum = 0;
+		for (int i = 0; i < enteredString.length(); i++) {
+			int rem = num % 10;
+			sum += (rem * (Math.pow(2, i)));
+			num = num / 10;
 		}
 		return sum;
 	}
-	 /****************************************************************************************/
-	
-	public static final  int binarySearchStringArray(String []ar,String word) {
-	       
-        Arrays.sort(ar);
-        for (int i = 0; i < ar.length; i++) {
-            System.out.println(ar[i]);
-        }
-        int first=0;
-        int last=ar.length-1;
-        int  mid = 0;
-       while( first <= last ){
-           mid =(first+last)/2;
-            if(word.compareTo(ar[mid])>0)
-            {
-                first=mid+1;
-            }
-            else if(word.compareTo(ar[mid])<0) {
-                last=mid-1;
-            }
-            else
-            {     
-            System.out.println("<"+word+">"+" is found at location "+(mid+1));
-            return mid;
-            }
-            if(first>last)
-            {
-                System.out.println(word+ "is not found.\n");
-            }
-        }
-    return mid;
-    }	
+
+	/****************************************************************************************/
+
+	public static final int binarySearchStringArray(String[] ar, String word) {
+
+		Arrays.sort(ar);
+		for (int i = 0; i < ar.length; i++) {
+			System.out.println(ar[i]);
+		}
+		int first = 0;
+		int last = ar.length - 1;
+		int mid = 0;
+		while (first <= last) {
+			mid = (first + last) / 2;
+			if (word.compareTo(ar[mid]) > 0) {
+				first = mid + 1;
+			} else if (word.compareTo(ar[mid]) < 0) {
+				last = mid - 1;
+			} else {
+				System.out.println("<" + word + ">" + " is found at location " + (mid + 1));
+				return mid;
+			}
+			if (first > last) {
+				System.out.println(word + "is not found.\n");
+			}
+		}
+		return mid;
+	}
+
+	/*******************************
+	 * Generic Binary Search
+	 *****************************/
+
+	public static <T extends Comparable<T>> void binarySearchGeneric(T arr[], int first, int last, T key) {
+		Arrays.sort(arr);
+		int mid = (first + last) / 2;
+		while (first <= last) {
+			if (arr[mid].compareTo(key) < 0) {
+				first = mid + 1;
+			} else if (arr[mid].compareTo(key) == 0) {
+				System.out.println("element is found at index: " + mid);
+				break;
+			} else {
+				last = mid - 1;
+			}
+			mid = (first + last) / 2;
+		}
+		if (first > last) {
+			System.out.println("Elements is not found");
+		}
+	}
+
+	/*******************************
+	 * Generic Bubble Search *
+	 ****************************/
+	public static <T extends Comparable<T>> T[] bubbleSortGeneric(T[] arr) {
+		for (int i = 0; i < arr.length - 1; i++) {
+			for (int j = i + 1; j < arr.length; j++) {
+				if (arr[i].compareTo(arr[j]) > 0) {
+					T temp = arr[i];
+					arr[i] = arr[j];
+					arr[j] = temp;
+				}
+			}
+		}
+		return arr;
+	}
+
+	/*******************************
+	 * Generic Insertion Sort *
+	 ***************************/
+	public static <T extends Comparable<T>> T[] insertionSortGeneric(T[] a) {
+
+		for (int i = 0; i < a.length - 1; i++) {
+			T pivoteElement = a[i];
+			int pivoteElementIndex = i;
+			for (int j = i + 1; j < a.length; j++) {
+				if (a[j].compareTo(pivoteElement) < 0) {
+					pivoteElement = a[j];
+					pivoteElementIndex = j;
+				}
+			}
+			T temp = a[i];
+			a[i] = a[pivoteElementIndex];
+			a[pivoteElementIndex] = temp;
+		}
+		return a;
+	}
+
+	/***************************************************************************************/
+
 }
