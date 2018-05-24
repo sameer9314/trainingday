@@ -165,10 +165,11 @@ public class Utility {
 			}
 		}
 		System.out.println("Number of wins are : " + Gambler.mstakeWinCount);
-		System.out.println("Wins percentage is : " + (Gambler.mstakeWinCount * 100) / Gambler.mstakeWinCount
-				+ Gambler.mstakeLossCount);
-		System.out.println("Loss percentage is : " + (Gambler.mstakeLossCount * 100) / Gambler.mstakeWinCount
-				+ Gambler.mstakeLossCount);
+		System.out.println("Number of Loss are : " + Gambler.mstakeLossCount);
+		System.out.println("Wins percentage is : " + ((Gambler.mstakeWinCount * 100) 
+				/ numberOfTimes));
+		System.out.println("Loss percentage is : " + ((Gambler.mstakeLossCount * 100) 
+				/ numberOfTimes));
 		scnObj.close();
 	}
 
@@ -446,7 +447,7 @@ public class Utility {
 		}
 		System.out.println("Start time is : " + startTime);
 		System.out.println("End time is : " + endTime);
-		System.out.println("Elapsed Time is : " + (endTime - startTime));
+		System.out.println("Elapsed Time is : " + (endTime - startTime)/1000000000+" s");
 	}
 
 	/*******************************************
@@ -732,13 +733,13 @@ public class Utility {
 	 * Tic-Tac-toe Ends
 	 **************************/
 
-	/********************************************
+	/*******************************************
 	 * Algorith Programs
-	 ********************************************/
+	 *******************************************/
 
 	/****************************************
 	 * Bubble Sort for String
-	 *********************************************/
+	 ****************************************/
 	/*
 	 * Function is written to sort the string using bubble sort algorithm.
 	 * 
@@ -766,7 +767,7 @@ public class Utility {
 
 	/****************************************
 	 * Bubble Sort method for integer
-	 *************************************************************************************************/
+	 ****************************************/
 	/*
 	 * Function is written to sort the integer array by using bubble sort algorithm.
 	 * 
@@ -1011,6 +1012,11 @@ public class Utility {
 	/*************************************************
 	 * Convert Temperature
 	 **************************************************/
+	/*
+	 * Function is written to convert the celsius into fahrenheit and vice versa.
+	 * 
+	 * @param celsius,fahrenheit is integer to get the input from user.
+	 */
 	public static void temperatureConversion(int celsius, int fahrenheit) {
 		if (fahrenheit == 0) {
 			System.out.println("Temperature in Fahrenheit is : " + (((celsius * 9) / 5) + 32));
@@ -1022,6 +1028,12 @@ public class Utility {
 	/*************************************************
 	 * Newtons method to find square root
 	 *************************************************/
+	/*
+	 * Function is written to find the square root of the entered number with the help of Newton method.
+	 * 
+	 * @param c is double the number to find the square root.
+	 * 
+	 */
 	public static void findSquareRoot(double c) {
 		double t;
 		t = c;
@@ -1048,8 +1060,8 @@ public class Utility {
 
 		if (choice == 'y') {
 			while (first <= last) {
-				System.out.println("Is Your Number present at " + mid);
-				System.out.println("Enter y if present or n if not present");
+				System.out.println("Is Your Number is " + array[mid]);
+				System.out.println("Enter y if Yes or n if not");
 				choice = Utility.getChar();
 				if (choice == 'y') {
 					System.out.println("Your Number is : " + array[mid]);
@@ -1209,6 +1221,160 @@ public class Utility {
 		return a;
 	}
 
-	/***************************************************************************************/
+	/***********************************
+	 * Day of Week
+	 * Function is written to validate the enterd date.
+	 * 
+	 * @param d,m,y is integer to get the input for the day,month,year from the user and validate it.
+	 * *********************************/
+	public static void dateValidate(int d, int m, int y) {
+        if ((m == 4 || m == 6 || m == 9 || m == 11) && (d >= 30)) {
+            System.out.println("SORRY!!!The month you have entered doesn't have 31 days");
+        } else if (m == 2) {
+            if (y % 100 == 0) {
+                if (y % 400 != 0 && d > 28) {
+                    System.out.println("This year is not a leap year......last date is 28 for this month!!");
+                } else if (y % 400 == 0 && d > 29) {
+                    System.out.println("SORRY!! The year you've entered is a leap year so FEBRUARY has 29 days... ");
+                } else {
+                    System.out.println("The day is " + findDay(d, m, y));
+                }
+            }
+            if (y % 100 != 0) {
+                if (y % 4 != 0 && d > 28) {
+                    System.out.println("This year is not a leap year......last date is 28 for this month!!");
+                } else if (y % 4 == 0 && d > 29) {
+                    System.out.println("SORRY!! The year you've entered is a leap year so FEBRUARY has 29 days... ");
+                } else {
+                    System.out.println("The day is " + findDay(d, m, y));
+                }
+            }
+        } else if (d > 31) {
+            System.out.println("SORRY!!! No month has " + d + "  days");
+        } else {
+            System.out.println("The day is " + findDay(d, m, y));
+        }
+    }
+	/***********************************
+	 * get Day
+	 * Function is written to find the day on the particular entered date after validation.
+	 * 
+	 * @param d,m,y is integer to get the input for the day,month,year from the user.
+	 * 
+	 * @returntype out is a String which shows the day of the particular date.
+	 * *********************************/
+	 public static String findDay(int d, int m, int y) {
+	        String[] week = {"sunday","monday","tuesday","wednesday","thursday","friday","saturday"};
+	        String day = "";
+	        int y0 = y - (14 - m) / 12;
+	        int x = y0 + (y0 / 4) - (y0 / 100) + (y0 / 400);
+	        int m0 = m + 12 * ((14 - m) / 12) - 2;
+	        int d0 = (d + x + (31 * m0) / 12) % 7;
+	        for (int i = 0; i < week.length; i++) {
+	            if (d0 == i)
+	                day = week[i];
+	        }
+	        return day;
+	    }
+	 
+	 
+	 /*******************************************************************************************
+	     * Function to perform Merge Sort.
+	     * @param first index and highest index of an array.
+	     */
+	        public static final void mergeSort(String[]array,int low,int high) {
+	            if(low<high) {
+	                int mid=low+(high-low)/2;
+	                mergeSort(array,low,mid);
+	                mergeSort(array,mid+1, high);
+	                merge(array,low,mid,high);
+	            }
+	        }
+	        public static void merge(String array[],int low,int mid,int high) 
+	        { 
+	            int i, mid1, k=0, low1; 
+	            String[] temp= new String[50];
+	            low1 = low; 
+	            i = low; 
+	            mid1 = mid + 1; 
+	            while ((low1 <= mid) && (mid1 <= high)) 
+	            { 
+	                if (array[low1].compareToIgnoreCase(array[mid1])<=0 ) 
+	                { 
+	                    temp[i] = array[low1]; 
+	                    low1++; 
+	                } 
+	                else 
+	                { 
+	                    temp[i] = array[mid1]; 
+	                    mid1++; 
+	                } 
+	                i++; 
+	            } 
+	            if (low1 > mid) 
+	            { 
+	                for (k = mid1; k <= high; k++) 
+	                { 
+	                    temp[i] = array[k]; 
+	                    i++; 
+	                } 
+	            } 
+	            else 
+	            { 
+	                for (k = low1; k <= mid; k++) 
+	                { 
+	                     temp[i] = array[k]; 
+	                     i++; 
+	                } 
+	            } 
+	          
+	            for (k = low; k <= high; k++) 
+	            { 
+	                array[k] = temp[k]; 
+	            }
+	        }
+	        
+	        /**
+	         * this function check prime numbers are anagram or not
+	         * @param string1
+	         * @param string2
+	         * @return true false boolean value after checking the anagram condition
+	         */
+	        public static boolean isAnagram(String firstString,String secondString) {
 
+	            if (firstString.length()==secondString.length()) {
+	            	firstString = Utility.bubbleSort(firstString);
+	            	secondString = Utility.bubbleSort(secondString);
+	                if (firstString.equals(secondString)) {
+	                    return true;
+	                } else {
+	                    return false;
+	                }
+	            } else
+	                return false;
+	        }
+	        
+	        /**
+	         * this function is written to check whether entered String is Anagram or not.
+	         * @param firstString 
+	         * @param secondString
+	         */
+	        public static void checkAnagram(String firstString,String secondString ) {
+	        	firstString=Utility.removeSpace(firstString);
+	    		secondString=Utility.removeSpace(secondString);
+	    		
+	    		if(firstString.length()==secondString.length()) {
+	    			
+	    			firstString=Utility.convertLowerCase(firstString);
+	    			secondString=Utility.convertLowerCase(secondString);
+	    			
+	    			firstString=Utility.bubbleSort(firstString);
+	    			secondString=Utility.bubbleSort(secondString);
+	    			
+	    			Utility.matchString(firstString,secondString);
+	    		}
+	    		else {
+	    			System.out.println("Enterd String is Not Anagram");
+	    		}
+	        }
 }

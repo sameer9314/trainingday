@@ -12,7 +12,7 @@ public class Test {
 	System.out.println();
 	System.out.println();
 	String name="sameer";
-	System.out.println("afasfdsadasda    "+Utility.insertionSort(name));
+	System.out.println("After insertion :"+Utility.insertionSort(name));
 	
 	System.out.println();
 	System.out.println();
@@ -34,8 +34,11 @@ public class Test {
 	Utility.binarySearch(name,0,name.length()-1,'e');
 	
 	Utility.binarySearch(name,0,name.length()-1,'f');
-
-
+	String[] s= {"sameer","kunal","rohit","prakash","nawaz","saket"};	
+	Utility.mergeSort(s,0,(s.length-1));
+	for(int i=0;i<s.length;i++) {
+		System.out.println(s[i]);
+	}
 	}
 
 }

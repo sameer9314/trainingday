@@ -18,7 +18,7 @@ public class VendingMachine {
 		System.out.println("Enter the amount in Rs to withdraw from your Account ");
 		int amount = Utility.getInt();
 		int noteCount = 1;
-		int a[] = { 1, 2, 5, 10, 50, 100, 500, 1000 };
+		int a[] = { 1, 2, 5, 10,20, 50, 100, 500, 1000,2000 };
 		for (int i = a.length - 1; i >= 0; i--) {
 			count = 0;
 			if (amount != 0) {
@@ -27,7 +27,7 @@ public class VendingMachine {
 						++noteCount;
 					}
 					amount = amount - a[i] * (noteCount - 1);
-					System.out.println(a[i] + "  is : " + (noteCount - 1));
+					System.out.println("Number of "+a[i] + " note  is : " + (noteCount - 1));
 				}
 			}
 			noteCount = 1;
