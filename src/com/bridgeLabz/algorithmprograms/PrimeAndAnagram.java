@@ -1,4 +1,4 @@
-package com.bridgeLanz.AlgorithmPrograms;
+package com.bridgeLabz.algorithmprograms;
 
 import java.util.ArrayList;
 
@@ -16,7 +16,7 @@ public class PrimeAndAnagram {
 
 	public static void main(String[] args) {
 		ArrayList<Integer> l=new ArrayList<Integer>();
-		for(int i=0;i<=1000;i++) {
+		for(int i=0;i<=1000;i++) { 
 			if(PrimeNumber.validatingNumber(i)==true) {
 				l.add(i);
 			}

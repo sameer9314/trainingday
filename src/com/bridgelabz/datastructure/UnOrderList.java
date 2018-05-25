@@ -3,12 +3,13 @@ package com.bridgelabz.datastructure;
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
 import java.io.File;
+import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.FileWriter;
 
 import com.bridgeLabz.Utility.Utility;
-
-public class unOrderList {
+ 
+public class UnOrderList { 
 
 	public static void main(String[] args) {
 		Utility obj=new Utility();
@@ -36,7 +37,7 @@ public class unOrderList {
 		}
 		System.out.println("Displaying List");
 		l.display();
-		
+		System.out.println("Enter the String you want to search");
 		String enteredString=Utility.getString();
 		if(l.search(enteredString)==true) {
 			l.remove(enteredString);

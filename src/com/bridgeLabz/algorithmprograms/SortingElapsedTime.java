@@ -1,4 +1,4 @@
-package com.bridgeLanz.AlgorithmPrograms;
+package com.bridgeLabz.algorithmprograms;
 
 import java.util.Map;
 import java.util.TreeMap;
@@ -20,13 +20,13 @@ public class SortingElapsedTime {
 	//Creating Utility object
 	Utility obj=new Utility();
 	
-	System.out.println("Enter the size of an array ");
+	System.out.println("Enter the size of an array "); 
 	int size=Utility.getInt();
 	
 	int array[]=new int[size];
 	Utility.arrayInit(array);
-	Utility.displayArray(array);
-	String name="sameer";
+	Utility.displayArray(array); 
+	String name="sameer";  
 	int last=array.length-1;
 	long startTime;
 	long endTime;

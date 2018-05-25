@@ -1,4 +1,4 @@
-package com.bridgeLanz.AlgorithmPrograms;
+package com.bridgeLabz.algorithmprograms;
 
 import com.bridgeLabz.Utility.Utility;
 
@@ -20,6 +20,5 @@ public class NewtonMethod {
 		Utility.findSquareRoot(c);
 	}
 	
-	
-
+	 
 }

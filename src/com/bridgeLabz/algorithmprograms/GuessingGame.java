@@ -1,4 +1,4 @@
-package com.bridgeLanz.AlgorithmPrograms;
+package com.bridgeLabz.algorithmprograms;
 
 import com.bridgeLabz.Utility.Utility;
 
@@ -15,9 +15,9 @@ public class GuessingGame {
 	public static void main(String[] args) {
 		//Creating Utility object
 		 Utility obj=new Utility();
-		
+		 
 		 int num=Integer.parseInt(args[0]);
-		
+		 num=(int)Math.pow(2,num);
 		 int array[]=new int[num];
 		 for(int i=0;i<num;i++) {
 			 array[i]=i;

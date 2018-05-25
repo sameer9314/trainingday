@@ -1,4 +1,4 @@
-package com.bridgeLanz.AlgorithmPrograms;
+package com.bridgeLabz.algorithmprograms;
 
 import com.bridgeLabz.Utility.Utility;
 
@@ -21,7 +21,7 @@ public class Test {
 	Utility.binarySearch(a,0,a.length-1,10);
 	Utility.binarySearch(a,0,a.length-1,15);
 	Utility.binarySearch(a,0,a.length-1,20);
-	Utility.binarySearch(a,0,a.length-1,21);
+	Utility.binarySearch(a,0,a.length-1,21); 
 	
 	
 	System.out.println();

@@ -15,7 +15,7 @@ import java.util.Scanner;
 import com.bridgeLabz.FunctionalPrograms.CoupanNumber;
 import com.bridgeLabz.FunctionalPrograms.Gambler;
 import com.bridgeLabz.FunctionalPrograms.Tic­Tac­Toe;
-import com.bridgeLanz.AlgorithmPrograms.BinaryToDecimal;
+import com.bridgeLabz.algorithmprograms.BinaryToDecimal;
 
 import java.util.Arrays;
 import java.util.Random;
@@ -188,7 +188,7 @@ public class Utility {
 		Random rand = new Random();
 		int a[] = new int[distinctCoupanNumber];
 		int rand_int;
-		int arrayIndex = 0;
+		int arrayIndex = 0; 
 		int totalRandomNumber = 0;
 		while (CoupanNumber.distinctElementcount < distinctCoupanNumber) {
 			totalRandomNumber++;
@@ -1038,7 +1038,7 @@ public class Utility {
 		double t;
 		t = c;
 		double epsilon = Math.pow(Math.E, -15);
-		while (Math.abs(t - (c / t)) > epsilon * t) {
+		while (Math.abs(t - (c / t)) > epsilon * t) { 
 			t = ((c / t) + t) / 2;
 		}
 
@@ -1095,11 +1095,11 @@ public class Utility {
 			count++;
 			int rem = deciamlValue % 2;
 			s = rem + s;
-			deciamlValue = deciamlValue / 2;
+			deciamlValue = deciamlValue / 2; 
 		}
-		for (int i = 0; i < 8 - count; i++) {
+		for (int i = 0; i < 8 - count; i++) { 
 			out += 0;
-		}
+		} 
 		s = out + s;
 		return s;
 	}
@@ -1114,7 +1114,7 @@ public class Utility {
 		int l2 = l - l1;
 
 		for (int i = 0; i < l1; i++) {
-			nibble1 += s.charAt(i);
+			nibble1 += s.charAt(i); 
 		}
 		for (int i = l2; i < l; i++) {
 			nibble2 += s.charAt(i);

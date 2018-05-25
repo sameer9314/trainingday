@@ -1,4 +1,4 @@
-package com.bridgeLanz.AlgorithmPrograms;
+package com.bridgeLabz.algorithmprograms;
 
 import com.bridgeLabz.Utility.Utility;
 
@@ -10,7 +10,7 @@ import com.bridgeLabz.Utility.Utility;
 *  @since   22-05-2018
 *
 ******************************************************************************/
-public class PrimeAndPalindrome extends PrimeNumber {
+public class PrimeAndPalindrome extends PrimeNumber { 
 	public static void main(String[] args) {
 		for(int i=0;i<=1000;i++) {
 			if(PrimeNumber.validatingNumber(i)==true) {

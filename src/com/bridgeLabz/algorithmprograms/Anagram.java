@@ -1,4 +1,4 @@
-package com.bridgeLanz.AlgorithmPrograms;
+package com.bridgeLabz.algorithmprograms;
 
 import com.bridgeLabz.Utility.Utility;
 
@@ -10,7 +10,7 @@ import com.bridgeLabz.Utility.Utility;
 *  @since   21-05-2018
 *
 ******************************************************************************/
-public class Anagram {
+public class Anagram { 
 	public static void main(String[] args) {
 		//Creating Utility object.
 		Utility obj=new Utility();

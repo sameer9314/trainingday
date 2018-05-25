@@ -18,7 +18,7 @@ public class CoupanNumber {
 	public static int distinctElementcount=0;
 	public static void main(String[] args) {
     	// Utility object created
-		Utility obj=new Utility();
+		Utility obj=new Utility(); 
 		
 		System.out.println("Enter the value of Distinct coupan numbers");
 	    int distinctCoupanNumber=Utility.getInt();

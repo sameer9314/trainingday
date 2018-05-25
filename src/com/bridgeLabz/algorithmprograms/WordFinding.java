@@ -1,4 +1,4 @@
-package com.bridgeLanz.AlgorithmPrograms;
+package com.bridgeLabz.algorithmprograms;
 
 import java.io.BufferedReader;
 import java.io.File;
@@ -19,11 +19,11 @@ public class WordFinding {
 
 	public static void main(String[] args) {
 		Utility obj = new Utility();
-		File f = new File("/home/administrator/eclipse-workspace/Funtional_Programs/src/com/bridgeLanz/AlgorithmPrograms/myFile.txt"+ "");
+		File f = new File("/home/administrator/eclipse-workspace/Funtional_Programs/src/com/bridgeLanz/AlgorithmPrograms/myFile.txt");
 		FileReader fs = null;
 		int count = 0;
 		ArrayList<String> a = new ArrayList<String>();
-		BufferedReader fo = null;
+		BufferedReader fo = null; 
 		try {
 			fs = new FileReader(f);
 			fo = new BufferedReader(fs);

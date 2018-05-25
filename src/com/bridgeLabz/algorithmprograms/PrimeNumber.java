@@ -1,4 +1,4 @@
-package com.bridgeLanz.AlgorithmPrograms;
+package com.bridgeLabz.algorithmprograms;
 
 import com.bridgeLabz.Utility.Utility;
 
@@ -12,7 +12,7 @@ import com.bridgeLabz.Utility.Utility;
 ******************************************************************************/
 public class PrimeNumber {
 	public static void main(String[] args) {
-		//Creating Utility obj
+		//Creating Utility obj 
 		Utility obj=new Utility();
 		
 		System.out.println("Printing all the Prime numbers between 0 and 1000");

@@ -1,4 +1,4 @@
-package com.bridgeLanz.AlgorithmPrograms;
+package com.bridgeLabz.algorithmprograms;
 
 public class GenericSample {
 //	public static int findintMax(int x,int y,int z) {

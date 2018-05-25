@@ -1,9 +1,9 @@
-package com.bridgeLanz.AlgorithmPrograms;
+package com.bridgeLabz.algorithmprograms;
 
 import com.bridgeLabz.Utility.Utility;
 
 /******************************************************************************
-*  Purpose: To convert Decimal to Binary.
+*  Purpose: To convert Decimal to Binary. 
 *   
 *  @author  Sameer Saurabh
 *  @version 1.0
@@ -12,7 +12,7 @@ import com.bridgeLabz.Utility.Utility;
 ******************************************************************************/
 public class DecimalTOBinary {
 
-	public static void main(String[] args) {
+	public static void main(String[] args) { 
 		Utility obj=new Utility();
 		System.out.println("Enter the value in Decimal");
 		int deciamlValue=Utility.getInt();
@@ -20,4 +20,4 @@ public class DecimalTOBinary {
 		
 	}
 
-}
+} 

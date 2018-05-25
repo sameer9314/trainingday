@@ -1,4 +1,4 @@
-package com.bridgeLanz.AlgorithmPrograms;
+package com.bridgeLabz.algorithmprograms;
 
 import com.bridgeLabz.Utility.Utility;
 
@@ -22,7 +22,7 @@ public class GenericTest {
 			System.out.print(b[i] + " ");
 		}
 		System.out.println();
-		for (int i = 0; i < c.length; i++) {
+		for (int i = 0; i < c.length; i++) { 
 			System.out.print(c[i]);
 		}
 		System.out.println();

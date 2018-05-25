@@ -9,7 +9,7 @@ public class MyLinkedList {
 	}
 	public void add(Comparable item) {
 		if (first == null) {
-			first = new Node(item);
+			first = new Node(item); 
 			count++;
 			return;
 		}
@@ -52,9 +52,12 @@ public class MyLinkedList {
 	public boolean search(Comparable item) {
 		Node last = first;
 		while (last.next != null) {
-			if (last.data.compareTo(item) == 0)
-				return true;
+			if (last.data.compareTo(item) == 0) {
+				return true;}
 			last = last.next;
+			if (last.data.compareTo(item) == 0) {
+				return true;}
+			
 		}
 		return false;
 	}

@@ -1,8 +1,8 @@
-package com.bridgeLanz.AlgorithmPrograms;
+package com.bridgeLabz.algorithmprograms;
 
 import com.bridgeLabz.Utility.Utility;
 
-/******************************************************************************
+/*****************************************************************************
 *  Purpose: To convert Binary to Decimal.
 *   
 *  @author  Sameer Saurabh
@@ -14,7 +14,7 @@ public class BinaryToDecimal {
 
 	public static void main(String[] args) {
 		Utility obj = new Utility();
-
+ 
 		System.out.println("Enter the number ");
 		int num = Utility.getInt();
 
