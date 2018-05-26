@@ -1,45 +1,34 @@
 package com.bridgelabz.datastructure;
 
+import com.bridgeLabz.Utility.Utility;
+
 public class DequeueLinkedListTest {
 
 	public static void main(String[] args) {
-		DequeueLinkedList dq = new DequeueLinkedList();
-
-		dq.addFront("radar");
-		dq.addFront("toot");
-		dq.addFront("madam");
-		
-//		System.out.println(dq.removeFront());
-//		System.out.println(dq.removeFront());
-//		System.out.println(dq.removeFront());
-		// String s="sameer";
-		// StringBuilder sb=new StringBuilder(s);
-		// sb.reverse();
-		// System.out.println(sb.toString());
-		//
-	 System.out.println(dq.size());
-
-//		for (int i = 1; i <= dq.size(); i++) {
-//			String s = (String) dq.removeFront();
-//			System.out.println(s);
-//			StringBuilder sb = new StringBuilder(s);
-//			sb.reverse();
-//			System.out.println(sb.toString());
-//			if (s.compareTo(sb.toString()) == 0) {
-//				System.out.println("String is palindrome");
-//			}
-//			else {
-//				System.out.println("String is not palindrome");
-//			}
-//		}
-	 int count=0;
-	 for (int i = 1; i <= dq.size(); i++) {
-		 count++;
-		 String s = (String) dq.removeFront();
-		 System.out.println(dq.isEmpty());
-		 System.out.println(s);
-	 }
-	 System.out.println(count);
+		DequeueLinkedList dequeue = new DequeueLinkedList();
+		Utility obj=new Utility();
+		System.out.println("Enter the string to check the palindrome");
+		String s=Utility.getString();
+		//char array[]=s.toCharArray();
+		for(int i=0;i<s.length();i++) {
+			dequeue.addFront(s.charAt(i));
+		}
+		int size=dequeue.size();
+		boolean palindrome=true;
+		for(int i=1;i<=size/2;i++) {
+			if(dequeue.removeFront().compareTo(dequeue.removeRear())==0) {
+				palindrome=true;
+			}
+			else {
+				palindrome=false;
+			}
+		}
+		if(palindrome==true) {
+			System.out.println("String is palindrome");
+		}
+		else
+		{
+			System.out.println("String is not palindrome");
+		}
 	}
-
 }

@@ -6,11 +6,9 @@ public class QueueLinkedList {
 	static QueueLinkedList queue() {
 		return new QueueLinkedList();
 	}
-	
 	void enqueue(Comparable item) {
 		l.add(item);
 	}
-	
 	void display() {
 	l.display();
 	}

@@ -1,29 +1,29 @@
 package com.bridgelabz.datastructure;
 
 public class Stack {
-	Comparable array[]=new Comparable[100];	
+	Comparable array[]=new Comparable[1000];	
 	static Stack stack(){
 		return new Stack();
 	} 
-	static int index=0;
+	static int top=0;
 	void push(Comparable item){
-		if(size()==100) {
+		if(size()==1000) {
 			System.out.println("Stack is full");
 			return;
 		}
-		array[index]=item;
-		index++;
+		array[top]=item;
+		top++;
 	}
 	Comparable pop(){
-		int newIndex=index;
-		index--;
+		int newIndex=top-1;
+		top--;
 		return array[newIndex];
 	}
 	void display(){
 		if(size()==0) {
 			System.out.println("Stack is empty,Nothing to display");
 		}
-		for(int i=0;i<size();i++) {
+		for(int i=size()-1;i>=0;i--) {
 			System.out.println(array[i]);
 		}
 	}
@@ -35,6 +35,6 @@ public class Stack {
 		return false;
 	} 
 	int size(){
-		return index;
+		return top;
 	}
 }

@@ -3,20 +3,19 @@ package com.bridgelabz.datastructure;
 public class QueueLinkedListTest {
 
 	public static void main(String[] args) {
-		QueueLinkedList q=QueueLinkedList.queue();
-		q.enqueue(10);
-		q.enqueue(20);
-		q.enqueue(30);
-		q.enqueue(40);
-		q.enqueue(50);
+		QueueLinkedList queue=QueueLinkedList.queue();
+		queue.enqueue(10);
+		queue.enqueue(20);
+		queue.enqueue(30);
+		queue.enqueue(40);
+		queue.enqueue(50);
 		
-		q.display();
+		queue.display();
 
-		q.dequeue();
+		queue.dequeue();
 		
 		System.out.println("Display");
-		q.display();
-		System.out.println(q.isEmpty());
+		queue.display();
+		System.out.println(queue.isEmpty());
 	}
-
 }

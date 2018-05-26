@@ -2,7 +2,7 @@ package com.bridgelabz.datastructure;
 
 import com.bridgeLabz.Utility.Utility;
 
-public class StackTest {
+public class ValidateExpression {
 
 	public static void main(String[] args) {
 		Utility obj=new Utility();

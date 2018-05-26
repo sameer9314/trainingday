@@ -24,7 +24,7 @@ public class PrimeNumber {
 		}
 	}
 	
-	static boolean  validatingNumber(int i){
+	public static boolean  validatingNumber(int i){
 		if(Utility.findPrimenNumber(i)==true) {
 				return true;
 		}

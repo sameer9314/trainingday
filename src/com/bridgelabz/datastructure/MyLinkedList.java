@@ -22,10 +22,10 @@ public class MyLinkedList {
 	}
 	
 	public void display() {
-		if(size()==0) {System.out.println("Nothing to display , List is empty");}
+		//if(size()==0) {System.out.println("None");}
 		Node last= first;
 		for(int i=1;i<=size();i++) {
-			System.out.println(last.data);
+			System.out.print(last.data+" ");
 			last=last.next;
 		}
 	}
