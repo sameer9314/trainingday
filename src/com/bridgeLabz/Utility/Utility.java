@@ -16,6 +16,7 @@ import com.bridgeLabz.FunctionalPrograms.CoupanNumber;
 import com.bridgeLabz.FunctionalPrograms.Gambler;
 import com.bridgeLabz.FunctionalPrograms.Tic­Tac­Toe;
 import com.bridgeLabz.algorithmprograms.BinaryToDecimal;
+import com.bridgelabz.datastructure.Calendar;
 
 import java.util.Arrays;
 import java.util.Random;
@@ -1227,33 +1228,50 @@ public class Utility {
 	 * 
 	 * @param d,m,y is integer to get the input for the day,month,year from the user and validate it.
 	 * *********************************/
-	public static void dateValidate(int d, int m, int y) {
-        if ((m == 4 || m == 6 || m == 9 || m == 11) && (d >= 30)) {
-            System.out.println("SORRY!!!The month you have entered doesn't have 31 days");
-        } else if (m == 2) {
-            if (y % 100 == 0) {
-                if (y % 400 != 0 && d > 28) {
-                    System.out.println("This year is not a leap year......last date is 28 for this month!!");
-                } else if (y % 400 == 0 && d > 29) {
-                    System.out.println("SORRY!! The year you've entered is a leap year so FEBRUARY has 29 days... ");
-                } else {
-                    System.out.println("The day is " + findDay(d, m, y));
-                }
-            }
+	public static String dateValidate(int d, int m, int y) {
+		if ((m == 4 || m == 6 || m == 9 || m == 11)) {
+			Calendar.monthEndDate = 30;
+			if ((d >= 30)) {
+				return "SORRY!!!The month you have entered doesn't have 31 days";
+			}
+		} else if (m == 2) {
+			if (y % 100 == 0) {
+				if (y % 400 != 0) {
+					Calendar.monthEndDate = 28;
+					if (d > 28) {
+					return "This year is not a leap year......last date is 28 for this month!!";
+					}
+				} else if (y % 400 == 0) {
+					Calendar.monthEndDate = 29;
+					if (d > 29) {
+						return "SORRY!! The year you've entered is a leap year so FEBRUARY has 29 days... ";
+					}
+				} else {
+					return "The day is " + findDay(d, m, y);
+				}
+			}
             if (y % 100 != 0) {
-                if (y % 4 != 0 && d > 28) {
-                    System.out.println("This year is not a leap year......last date is 28 for this month!!");
-                } else if (y % 4 == 0 && d > 29) {
-                    System.out.println("SORRY!! The year you've entered is a leap year so FEBRUARY has 29 days... ");
-                } else {
-                    System.out.println("The day is " + findDay(d, m, y));
+                if (y % 4 != 0 ) {
+                	Calendar.monthEndDate = 28;
+                	if(d > 28) {
+                    return "This year is not a leap year......last date is 28 for this month!!";
+                	}
+                	} else if (y % 4 == 0) {
+                		Calendar.monthEndDate = 29;
+                		if( d > 29) {
+                    return "SORRY!! The year you've entered is a leap year so FEBRUARY has 29 days... ";
+                		}
+                		} else {
+                  return "The day is " + findDay(d, m, y);
                 }
             }
         } else if (d > 31) {
-            System.out.println("SORRY!!! No month has " + d + "  days");
+           return "SORRY!!! No month has " + d + "  days";
         } else {
-            System.out.println("The day is " + findDay(d, m, y));
+        	Calendar.monthEndDate=31;
+            return "The day is " + findDay(d, m, y);
         }
+		return "not valid input";
     }
 	/***********************************
 	 * get Day
@@ -1271,8 +1289,9 @@ public class Utility {
 	        int m0 = m + 12 * ((14 - m) / 12) - 2;
 	        int d0 = (d + x + (31 * m0) / 12) % 7;
 	        for (int i = 0; i < week.length; i++) {
-	            if (d0 == i)
-	                day = week[i];
+	            if (d0 == i) {
+	            	Calendar.weekDay=i;
+	                day = week[i];}
 	        }
 	        return day;
 	    }

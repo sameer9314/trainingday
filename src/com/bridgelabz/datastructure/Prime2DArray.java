@@ -23,15 +23,7 @@ public class Prime2DArray {
 				}
 			}
 		}
-		System.out.print("     ");
-		for (int i = 0; i < 100; i++) {
-			System.out.print(i+" ");
-		}
-		System.out.println();
-		System.out.println("----------------------------------------------------------------------------------------------------------------------");
-		for (int k = 0; k < 10; k++) {
-		
-		}
+
 			for (int i = 0; i < 10; i++) {
 				System.out.println("");
 				System.out.print(i+" "+" | ");

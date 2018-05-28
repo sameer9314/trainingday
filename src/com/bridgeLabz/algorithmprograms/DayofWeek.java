@@ -14,6 +14,7 @@ public class DayofWeek {
 		  int day=Integer.parseInt(args[0]);
 		  int month=Integer.parseInt(args[1]);
 		  int year=Integer.parseInt(args[2]);
-		  Utility.dateValidate(day,month,year);
+		  
+		  System.out.println(Utility.dateValidate(day,month,year));
 	}
 }

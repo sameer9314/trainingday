@@ -36,7 +36,7 @@ public class SearchFunctionSlot {
 		}
 		System.out.println("Displaying List");
 		l.display();
-		//System.out.println("My list size is : "+l.size());
+
 		MyLinkedList array[]=new MyLinkedList[11];
 		for(int i=0;i<11;i++) {
 			array[i]=new MyLinkedList();
@@ -47,9 +47,7 @@ public class SearchFunctionSlot {
 			Integer index=(item)%11;
 			array[index].add(item);
 		}
-//		for(int i=0;i<listsize;i++) {
-//			array[i].display();
-//		}
+
 		String temp="";
 		for(int i=0;i<listsize;i++) {
 			int size=array[i].size();
@@ -57,7 +55,7 @@ public class SearchFunctionSlot {
 				temp+=array[i].pop()+" ";
 			}
 		}
-		//System.out.println(" Printing string "+temp);
+	
 		try {
 			fw=new FileWriter(f);
 			BufferedWriter bw=new BufferedWriter(fw);

@@ -25,7 +25,7 @@ public class OrderLinkedListTest {
 		System.out.println(ol.index(10));
 		System.out.println(ol.index(25));
 		System.out.println(ol.index(88));
-		
+	
 		ol.pop();
 		System.out.println("Display");
 		ol.display();

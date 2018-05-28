@@ -25,6 +25,7 @@ public class PrimeAnagramStack {
 	                }
 	            }
 	        }
+	       // System.out.println(s.size());
 	        s.display();
 	    }
 
