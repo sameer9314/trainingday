@@ -1,5 +1,13 @@
 package com.bridgelabz.datastructure;
 
+/******************************************************************************
+*  Purpose: To create a method of Dequeue Linked List.
+*   
+*  @author  Sameer Saurabh
+*  @version 1.0
+*  @since   26-05-2018
+*
+******************************************************************************/
 public class DequeueLinkedList {
 	MyLinkedList l=MyLinkedList.list();
 	static DequeueLinkedList dequeue(){

@@ -2,7 +2,14 @@ package com.bridgelabz.datastructure;
 
 import com.bridgeLabz.Utility.Utility;
 import com.bridgeLabz.algorithmprograms.PrimeNumber;
-
+/******************************************************************************
+*  Purpose: To print a Prime and Anagram number between 0 and 1000 in 2D-Array.
+*   
+*  @author  Sameer Saurabh
+*  @version 1.0
+*  @since   28-05-2018
+*
+******************************************************************************/
 public class PrimeAnagram2DArray {
 	public static void main(String[] args) {
 		MyLinkedList array[][] = new MyLinkedList[11][];

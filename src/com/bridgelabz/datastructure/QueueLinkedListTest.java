@@ -12,8 +12,19 @@ public class QueueLinkedListTest {
 		
 		queue.display();
 
+		System.out.print(queue.dequeue());
+		System.out.println("Display");
+		queue.display();
 		queue.dequeue();
-		
+		System.out.println("Display");
+		queue.display();
+		queue.dequeue();
+		System.out.println("Display");
+		queue.display();
+		queue.dequeue();
+		System.out.println("Display");
+		queue.display();
+		queue.dequeue();
 		System.out.println("Display");
 		queue.display();
 		System.out.println(queue.isEmpty());

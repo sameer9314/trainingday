@@ -1,7 +1,14 @@
 package com.bridgelabz.datastructure;
 
 import com.bridgeLabz.Utility.Utility;
-
+/******************************************************************************
+*  Purpose: To validate whether the entered expression is valid or not by using stack.
+*   
+*  @author  Sameer Saurabh
+*  @version 1.0
+*  @since   26-05-2018
+*
+******************************************************************************/
 public class ValidateExpression {
 
 	public static void main(String[] args) {

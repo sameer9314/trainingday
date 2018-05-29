@@ -1,5 +1,12 @@
 package com.bridgelabz.datastructure;
-
+/******************************************************************************
+*  Purpose: To create a method of Queue and its implementation using array.
+*   
+*  @author  Sameer Saurabh
+*  @version 1.0
+*  @since   26-05-2018
+*
+******************************************************************************/
 public class Queue {
 	Comparable[] array=new Comparable[100];
 	int rear=0;

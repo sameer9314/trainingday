@@ -2,7 +2,15 @@ package com.bridgelabz.datastructure;
 
 import com.bridgeLabz.Utility.Utility;
 
-public class DequeueLinkedListTest {
+/******************************************************************************
+*  Purpose: To check whether the entered String is palindrome or not by using Dequeue
+*   
+*  @author  Sameer Saurabh
+*  @version 1.0
+*  @since   26-05-2018
+*
+******************************************************************************/
+public class PalindromeChecker {
 
 	public static void main(String[] args) {
 		DequeueLinkedList dequeue = new DequeueLinkedList();

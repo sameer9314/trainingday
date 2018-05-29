@@ -4,12 +4,20 @@ import java.util.Random;
 
 import com.bridgeLabz.Utility.Utility;
 
-public class QueueTest {
+/******************************************************************************
+*  Purpose: To create a panel to add People to Queue to Deposit or Withdraw Money and dequeue.
+*   
+*  @author  Sameer Saurabh
+*  @version 1.0
+*  @since   26-05-2018
+*
+******************************************************************************/
+public class CashCounter {
 
 	public static void main(String[] args) {
 		Queue q = Queue.queue();
 		Utility obj = new Utility();
-		System.out.println(q.isEmpty());
+		//System.out.println(q.isEmpty());
 		int amount =5000000;
 		Random r=new Random();
 		int n=r.nextInt(10); 
@@ -41,20 +49,21 @@ public class QueueTest {
 						}
 					}
 				}
+				else
 				if (choice == 2) {
 					boolean amountWithdrawn = false;
 					while (amountWithdrawn == false) {
 						System.out.println("Enter the amount to withdraw");
 						int withdrawAmount = Utility.getInt();
 						if (withdrawAmount <= amount) {
-							if (withdrawAmount <= 100000) {
+							if (withdrawAmount <= 1000000) {
 								amount = amount - withdrawAmount;
 								q.dequeue();
 								System.out.println(withdrawAmount + " Amount withdrawn successfully");
 								amountWithdrawn = true;
 								serviceProvided = true;
 							} else {
-								System.out.println("withdraw amount must be less than or equal to 1 lakh");
+								System.out.println("withdraw amount must be less than or equal to 10 lakh");
 							}
 						} 
 						else {
@@ -83,7 +92,7 @@ public class QueueTest {
 			}
 		}
 		System.out.println("Remaining amount is : "+amount);
-		System.out.println(q.isEmpty());
+		//System.out.println(q.isEmpty());
 	}
 
 }

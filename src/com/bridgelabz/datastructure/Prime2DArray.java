@@ -1,7 +1,14 @@
 package com.bridgelabz.datastructure;
 
 import com.bridgeLabz.Utility.Utility;
-
+/******************************************************************************
+*  Purpose: To print a Prime number between 0 and 1000 in 2D-Array.
+*   
+*  @author  Sameer Saurabh
+*  @version 1.0
+*  @since   28-05-2018
+*
+******************************************************************************/
 public class Prime2DArray {
 
 	public static void main(String[] args) {

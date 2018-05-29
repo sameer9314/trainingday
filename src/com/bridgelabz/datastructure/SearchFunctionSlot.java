@@ -7,7 +7,14 @@ import java.io.FileReader;
 import java.io.FileWriter;
 
 import com.bridgeLabz.Utility.Utility;
-
+/******************************************************************************
+*  Purpose: To implement a number chaining.
+*   
+*  @author  Sameer Saurabh
+*  @version 1.0
+*  @since   28-05-2018
+*
+******************************************************************************/
 public class SearchFunctionSlot {
 	@SuppressWarnings({ "rawtypes", "unused" })
 	public static void main(String[] args) {

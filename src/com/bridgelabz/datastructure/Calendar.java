@@ -1,7 +1,14 @@
 package com.bridgelabz.datastructure;
 
 import com.bridgeLabz.Utility.Utility;
-
+/******************************************************************************
+*  Purpose: To print a calendar for the entered month and year by using 2D-Array.
+*   
+*  @author  Sameer Saurabh
+*  @version 1.0
+*  @since   28-05-2018
+*
+******************************************************************************/
 public class Calendar {
 
 	public static int weekDay;
@@ -10,14 +17,14 @@ public class Calendar {
 	public static void main(String[] args) {
 		Utility obj = new Utility();
 		int day = 1;
+		System.out.println("Enter month");
 		int enteredMonth = Utility.getInt();
+		System.out.println("Enter year");
 		int enteredyear = Utility.getInt();
-
+		System.out.println();
 		Utility.findDay(day, enteredMonth, enteredyear);
 
-		// System.out.println("week day" + Calendar.weekDay);
-
-		 String[][] calendar = new String[7][7];
+	    String[][] calendar = new String[7][7];
 
 		calendar[0][0] = "S ";
 		calendar[0][1] = "M ";
@@ -40,7 +47,6 @@ public class Calendar {
 		System.out.println();
 
 		Utility.dateValidate(1, enteredMonth, enteredyear);
-		// System.out.println(Calendar.monthEndDate);
 		int dateCount = 1;
 		int j;
 		for (int i = 1; i < 7; i++) {

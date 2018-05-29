@@ -1,6 +1,14 @@
 package com.bridgelabz.datastructure;
 
 import java.util.ArrayList;
+/******************************************************************************
+*  Purpose: To print a Prime and Anagram number between 0 and 1000 in Queue.
+*   
+*  @author  Sameer Saurabh
+*  @version 1.0
+*  @since   28-05-2018
+*
+******************************************************************************/
 
 import com.bridgeLabz.Utility.*;
 import com.bridgeLabz.algorithmprograms.PrimeNumber;

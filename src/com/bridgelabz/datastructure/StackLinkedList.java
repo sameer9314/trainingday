@@ -7,26 +7,31 @@ package com.bridgelabz.datastructure;
 *  @since   26-05-2018
 *
 ******************************************************************************/
-public class QueueLinkedList {
-
+public class StackLinkedList {
 	MyLinkedList l=MyLinkedList.list();
-	static QueueLinkedList queue() {
-		return new QueueLinkedList();
+	static StackLinkedList stack(){
+		return new StackLinkedList();
+	} 
+	
+	void push(Comparable item){
+	l.insert(item,0);
 	}
-	void enqueue(Comparable item) {
-		l.add(item);
-	}
-	void display() {
-	l.display();
-	}
-	Comparable dequeue() {
-		return(l.pop(0));
-	}
-	int size() {
-		return l.size();
-	}
-	boolean isEmpty() {
-		return l.isEmpty();
+	Comparable pop(){
+		return l.pop(0);
 	}
 	
-}
+	void display(){
+		l.display();
+		}
+	
+	Comparable peek(){
+		return l.peek();
+	}
+	boolean isEmpty(){
+	return l.isEmpty();
+	} 
+	int size(){
+		return l.size();
+	}
+	}
+

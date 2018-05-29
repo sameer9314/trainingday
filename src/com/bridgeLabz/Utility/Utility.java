@@ -1297,7 +1297,7 @@ public class Utility {
 	    }
 	 
 	 
-	 /*******************************************************************************************
+	 	/*
 	     * Function to perform Merge Sort.
 	     * @param first index and highest index of an array.
 	     */
@@ -1353,7 +1353,7 @@ public class Utility {
 	            }
 	        }
 	        
-	        /**
+	        /*
 	         * this function check prime numbers are anagram or not
 	         * @param string1
 	         * @param string2
@@ -1373,7 +1373,7 @@ public class Utility {
 	                return false;
 	        }
 	        
-	        /**
+	        /*
 	         * this function is written to check whether entered String is Anagram or not.
 	         * @param firstString 
 	         * @param secondString
@@ -1396,4 +1396,23 @@ public class Utility {
 	    			System.out.println("Enterd String is Not Anagram");
 	    		}
 	        }
+	        
+	        /*
+	         * this function is written to find the number of binary search tree using catalan formula.
+	         * @param n is the integer which denotes the number of nodes.
+	         * @returntype n is the number of binary search tree of a given number of nodes..
+	         */
+	        public static int catalanMethod(int n) {
+	    		return  fact(2*n) / (fact(n+1)*fact(n));
+	    	}
+	    	
+	        /*
+	         * this function is written to find the factorial of the given number.
+	         * @param n is the entered number to find the factorial.
+	         * @returntype is the factorial of a given number.
+	         */
+	        public static int fact(int n) {
+	    		if(n==0) return 1;
+	    		return n*(fact(n-1));
+	    	}
 }

@@ -8,6 +8,14 @@ import java.io.FileWriter;
 
 import com.bridgeLabz.Utility.Utility;
 
+/******************************************************************************
+*  Purpose: To read from file the list of Numbers and take user input type for a new number.
+*   
+*  @author  Sameer Saurabh
+*  @version 1.0
+*  @since   26-05-2018
+*
+******************************************************************************/
 public class OrderedList {
 
 	public static void main(String[] args) {
@@ -17,6 +25,7 @@ public class OrderedList {
 		FileReader fr=null;
 		int count=0;
 		OrderLinkedList ol=OrderLinkedList.orderedlist();
+		//NewOrderLinkedList ol=NewOrderLinkedList.orderedlist();
 		BufferedReader br=null;
 		FileWriter fw=null;
 		try {
@@ -28,7 +37,7 @@ public class OrderedList {
 				String [] str=word.split(",");
 				for(int i=0;i<str.length;i++) {
 					count++;
-					ol.add(str[i]);
+					ol.add(Integer.parseInt(str[i]));
 				}
 				break;
 			}
@@ -36,7 +45,7 @@ public class OrderedList {
 			e.printStackTrace();
 		}
 		System.out.println("Enter the value you want to search and add");
-		String enteredString=Utility.getString();
+		int enteredString=Utility.getInt();
 		if(ol.search(enteredString)==true) {
 			ol.remove(enteredString);
 		}

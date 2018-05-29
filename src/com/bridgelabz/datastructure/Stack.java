@@ -1,5 +1,12 @@
 package com.bridgelabz.datastructure;
-
+/******************************************************************************
+*  Purpose: To create a method of Stack and its implementation using array.
+*   
+*  @author  Sameer Saurabh
+*  @version 1.0
+*  @since   26-05-2018
+*
+******************************************************************************/
 public class Stack {
 	Comparable array[]=new Comparable[1000];	
 	static Stack stack(){

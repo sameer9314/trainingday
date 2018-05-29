@@ -4,7 +4,14 @@ import java.util.ArrayList;
 
 import com.bridgeLabz.Utility.Utility;
 import com.bridgeLabz.algorithmprograms.PrimeNumber;
-
+/******************************************************************************
+*  Purpose: To print a Prime and Anagram number between 0 and 1000 in Stack.
+*   
+*  @author  Sameer Saurabh
+*  @version 1.0
+*  @since   28-05-2018
+*
+******************************************************************************/
 public class PrimeAnagramStack {
 
 	public static void main(String[] args) {

@@ -1,5 +1,12 @@
 package com.bridgelabz.datastructure;
-
+/******************************************************************************
+*  Purpose: To create a method of Single Linked List and its implementation.
+*   
+*  @author  Sameer Saurabh
+*  @version 1.0
+*  @since   26-05-2018
+*
+******************************************************************************/
 public class MyLinkedList {
 	private Node first;
 	int count;
@@ -20,7 +27,23 @@ public class MyLinkedList {
 		last.next = new Node(item);
 		count++;
 	}
-	
+	public void addSort(Comparable item) {
+		Node newNode=new Node(item);
+		if (first == null || first.data.compareTo(newNode.data)>=0 ) {
+			newNode.next=first;
+			first=newNode;
+			count++;
+			return;
+		}
+		Node current=first;
+		while(current.next!=null && current.next.data.compareTo(newNode.data)<0)
+		{
+			current=current.next;
+		}
+		newNode.next=current.next;
+		current.next=newNode;
+		count++;
+	}
 	public void display() {
 		//if(size()==0) {System.out.println("None");}
 		Node last= first;
@@ -156,4 +179,7 @@ public Comparable pop() {
 	count--;
 	return temp.data;
 		}
+public Comparable peek() {
+	return first.data;
+} 
 }

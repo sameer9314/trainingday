@@ -9,8 +9,15 @@ import java.io.FileWriter;
 
 import com.bridgeLabz.Utility.Utility;
  
+/******************************************************************************
+*  Purpose: To read from file the list of words and take user input to search a text.
+*   
+*  @author  Sameer Saurabh
+*  @version 1.0
+*  @since   26-05-2018
+*
+******************************************************************************/
 public class UnOrderList { 
-
 	public static void main(String[] args) {
 		Utility obj=new Utility();
 		File f= new File("/home/administrator/eclipse-workspace/Funtional_Programs/sameer.txt");
@@ -23,7 +30,7 @@ public class UnOrderList {
 			fr=new FileReader(f);
 			br=new BufferedReader(fr);
 			String word=br.readLine();
-			System.out.println(word);
+			//System.out.println(word);
 			while((word!=null)) {
 				String [] str=word.split(",");
 				for(int i=0;i<str.length;i++) {
@@ -37,6 +44,7 @@ public class UnOrderList {
 		}
 		System.out.println("Displaying List");
 		l.display();
+		System.out.println();
 		System.out.println("Enter the String you want to search");
 		String enteredString=Utility.getString();
 		if(l.search(enteredString)==true) {
@@ -44,9 +52,9 @@ public class UnOrderList {
 		}
 		System.out.println("Displaying list after remove");
 		l.display();
-		
+		System.out.println();
 		if(l.search(enteredString)==false){
-			l.add("SAURABH");
+			l.add("saurabh");
 		}
 		System.out.println("Displaying list after add");
 		l.display();
@@ -55,7 +63,7 @@ public class UnOrderList {
 		while(l.size()>0) {
 			temp=l.pop()+","+temp;
 		}
-		System.out.println(" Printing string "+temp);
+		//System.out.println(" Printing string "+temp);
 		try {
 			fw=new FileWriter(f);
 			BufferedWriter bw=new BufferedWriter(fw);
