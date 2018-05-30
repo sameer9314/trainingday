@@ -54,7 +54,7 @@ public class SearchFunctionSlot {
 			Integer index=(item)%11;
 			array[index].add(item);
 		}
-
+		
 		String temp="";
 		for(int i=0;i<listsize;i++) {
 			int size=array[i].size();
@@ -62,7 +62,7 @@ public class SearchFunctionSlot {
 				temp+=array[i].pop()+" ";
 			}
 		}
-	
+		System.out.println("String "+temp);
 		try {
 			fw=new FileWriter(f);
 			BufferedWriter bw=new BufferedWriter(fw);

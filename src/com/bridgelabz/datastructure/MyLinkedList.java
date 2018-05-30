@@ -52,6 +52,14 @@ public class MyLinkedList {
 			last=last.next;
 		}
 	}
+	public void displayln() {
+		//if(size()==0) {System.out.println("None");}
+		Node last= first;
+		for(int i=1;i<=size();i++) {
+			System.out.println(last.data+" ");
+			last=last.next;
+		}
+	}
 	public void insert(Comparable item, int pos) {
 		if (pos > count)
 			throw new IndexOutOfBoundsException();

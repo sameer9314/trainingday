@@ -1402,7 +1402,7 @@ public class Utility {
 	         * @param n is the integer which denotes the number of nodes.
 	         * @returntype n is the number of binary search tree of a given number of nodes..
 	         */
-	        public static int catalanMethod(int n) {
+	        public static long catalanMethod(int n) {
 	    		return  fact(2*n) / (fact(n+1)*fact(n));
 	    	}
 	    	
@@ -1411,7 +1411,7 @@ public class Utility {
 	         * @param n is the entered number to find the factorial.
 	         * @returntype is the factorial of a given number.
 	         */
-	        public static int fact(int n) {
+	        public static long fact(int n) {
 	    		if(n==0) return 1;
 	    		return n*(fact(n-1));
 	    	}

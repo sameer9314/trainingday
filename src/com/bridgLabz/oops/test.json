@@ -1,0 +1,19 @@
+
+ [   {  
+        "name":"John",
+        "city":"Berlin",
+      
+        "job":"Teacher"
+    },
+    {  
+        "name":"Mark",
+        "city":"Oslo",
+        
+        "job":"Doctor"
+    },
+    {
+    	"name":"Sameer",
+    	"city":"Patna",
+    	"job":"Cloud Developer"
+    }
+    ]

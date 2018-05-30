@@ -25,7 +25,6 @@ public class OrderedList {
 		FileReader fr=null;
 		int count=0;
 		OrderLinkedList ol=OrderLinkedList.orderedlist();
-		//NewOrderLinkedList ol=NewOrderLinkedList.orderedlist();
 		BufferedReader br=null;
 		FileWriter fw=null;
 		try {

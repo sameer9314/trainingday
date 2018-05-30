@@ -15,7 +15,7 @@ public class NumberOfBST {
 		Utility obj=new Utility();
 		System.out.println("Enter the number of test cases : ");
 		int noOfTestCases=Utility.getInt();
-		int [] array=new int[noOfTestCases];
+		 long[] array=new long[noOfTestCases];
 		for(int i=0;i<noOfTestCases;i++) {
 			System.out.println("Enter  test case "+(i+1));
 			array[i]=Utility.catalanMethod(Utility.getInt());
