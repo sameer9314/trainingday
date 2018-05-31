@@ -1,0 +1,57 @@
+{
+"Rice" : [
+		
+		{
+			"name": "Wholegrain Rice ",
+			"weight":50,
+			"pricePerKg":25
+		},
+		{
+			"name": "Jasmine Rice",
+			"weight":50,
+			"pricePerKg":80
+		},
+		{
+			"name": "Japonica Rice",
+			"weight":20,
+			"pricePerKg":100
+		}
+	],
+	
+	"Pulses" : [
+		{
+			"name": "Bajra",
+			"weight": 30,
+			"pricePerKg": 60
+		},
+		{
+			"name": "Chickpeas",
+			"weight": 40,
+			"pricePerKg": 70
+		},
+		{
+			"name": "Dry Beans",
+			"weight": 50,
+			"pricePerKg": 50
+		}
+	],
+	
+	"Wheats" : [
+		
+		{
+			"name": "Common Wheat",
+			"weight":100,
+			"pricePerKg":40
+		},
+		{
+			"name": "Triticale",
+			"weight":40,
+			"pricePerKg":60
+		},
+		{
+			"name": "Spelt",
+			"weight":30,
+			"pricePerKg":70
+		}
+	]
+}

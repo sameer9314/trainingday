@@ -1,9 +1,7 @@
-package com.bridgLabz.oops;
+package com.bridgelabz.oops.regex;
 
-import java.util.Random;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
-import com.bridgelabz.datastructure.MyLinkedList;
 
 
 

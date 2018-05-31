@@ -33,7 +33,7 @@ public class Utility {
 	/**********************************
 	 * Head vs Tails
 	 **********************************/
-	/*
+	/**
 	 * Function to calculate the Percentage of Heads vs Tails.
 	 *
 	 * @param n the integer to flip the coins for n times.
@@ -57,7 +57,7 @@ public class Utility {
 	/*************************************
 	 * Leap Year
 	 ************************************/
-	/*
+	/**
 	 * Function to find whether year is leap or not.
 	 *
 	 * @param year the integer to find the leap year.
@@ -78,7 +78,7 @@ public class Utility {
 	/*************************************
 	 * Power of table 2
 	 *************************************/
-	/*
+	/**
 	 * Function to print the power of table 2.
 	 *
 	 * @param n the intger to print the power of table 2 till n.
@@ -97,7 +97,7 @@ public class Utility {
 	/***********************************
 	 * Harmonic Value
 	 ***********************************/
-	/*
+	/**
 	 * Function to find the harmonic value of nth term.
 	 *
 	 * @param n the integer to find the harmonic value till n.
@@ -114,7 +114,7 @@ public class Utility {
 	/**************************************
 	 * Prime Factor
 	 *************************************/
-	/*
+	/**
 	 * Function to find the Prime factors of given number.
 	 *
 	 * @param num the integer to find the prime factor.
@@ -138,7 +138,7 @@ public class Utility {
 	/****************************************
 	 * Play Gambler Game
 	 ****************************************/
-	/*
+	/**
 	 * Function is written to determines number of times of Wins and Percentage of
 	 * Win And Loss
 	 *
@@ -177,7 +177,7 @@ public class Utility {
 	/*************************************
 	 * Generate Coupan Number
 	 *************************************/
-	/*
+	/**
 	 * Function is written to get the total number of times random number method
 	 * needed to call to store distinct random number in given array size.
 	 *
@@ -186,14 +186,14 @@ public class Utility {
 	 */
 	public void generateCoupan(int distinctCoupanNumber) {
 		System.out.println("distinctCoupanNumber is : " + distinctCoupanNumber);
-		Random rand = new Random();
+		Random rand = new Random(distinctCoupanNumber);
 		int a[] = new int[distinctCoupanNumber];
 		int rand_int;
 		int arrayIndex = 0; 
 		int totalRandomNumber = 0;
 		while (CoupanNumber.distinctElementcount < distinctCoupanNumber) {
 			totalRandomNumber++;
-			rand_int = rand.nextInt(20);
+			rand_int = rand.nextInt();
 			if (CoupanNumber.distinctElementcount == 0) {
 				a[arrayIndex] = rand_int;
 				arrayIndex++;
@@ -214,7 +214,7 @@ public class Utility {
 	/*************************************
 	 * Check Distinct element in Array
 	 *************************************/
-	/*
+	/**
 	 * Function is written to whether the generated random number is distinct or
 	 * not.
 	 *
@@ -238,7 +238,7 @@ public class Utility {
 	/*****************************************
 	 * Generate one Integer
 	 *****************************************/
-	/*
+	/**
 	 * Function is written to generate one integer number.
 	 */
 	public static int getInt() {
@@ -248,7 +248,7 @@ public class Utility {
 	/****************************************
 	 * Generate one String
 	 ****************************************/
-	/*
+	/**
 	 * Function is written to generate one String.
 	 */
 	public static String getString() {
@@ -258,7 +258,7 @@ public class Utility {
 	/*****************************************
 	 * Generate one character value
 	 *****************************************/
-	/*
+	/**
 	 * Function is written to generate one Char.
 	 */
 	public static char getChar() {
@@ -267,8 +267,8 @@ public class Utility {
 
 	/*************************************
 	 * 2-D Array Initialisation
-	 *************************************/
-	/*
+	 **************************************/
+	/**
 	 * Function is written to initialise 2D- Array index with integer value.
 	 *
 	 * @param array the 2-D integer Array to initialise its element.
@@ -284,7 +284,7 @@ public class Utility {
 	/*************************************
 	 * 2-D Array Display
 	 *************************************/
-	/*
+	/**
 	 * Function is written to display 2D- Array elements
 	 * 
 	 * @param array the 2-D integer Array to display its elemnts.
@@ -303,7 +303,7 @@ public class Utility {
 	/****************************************
 	 * 1-D Array Initialisation
 	 ****************************************/
-	/*
+	/**
 	 * Function is written to initialise Array index with integer value.
 	 *
 	 * @param array the 1-D integer array to initiaise its element.
@@ -318,7 +318,7 @@ public class Utility {
 	/*********************************************
 	 * 1-D Array Display
 	 *********************************************/
-	/*
+	/**
 	 * Function is written to display Array elements
 	 * 
 	 * @param array the 1-D integer array to display its element.
@@ -333,7 +333,7 @@ public class Utility {
 	/****************************************
 	 * Distinct triplet
 	 ****************************************/
-	/*
+	/**
 	 * Function is written to find the number of triplets whose sum is equal to
 	 * zero. And to display triplets combinations and number of triplets.
 	 * 
@@ -365,7 +365,7 @@ public class Utility {
 	/*******************************************
 	 * Euclidean Distance
 	 *******************************************/
-	/*
+	/**
 	 * Function is written to find the Euclidean distance from the given point (x,y)
 	 * . And to display Euclidean distance from the given point.
 	 * 
@@ -380,7 +380,7 @@ public class Utility {
 	 * Roots of the quadratic equation
 	 *****************************************/
 
-	/*
+	/**
 	 * Function is written to find the roots of the quadratic equation. And to
 	 * display Euclidean distance from the given point.
 	 * 
@@ -400,7 +400,7 @@ public class Utility {
 	 * Wind Chill
 	 *********************************************/
 
-	/*
+	/**
 	 * Function is written to find the wind chill.
 	 *
 	 * @param t the integer input for temperature.
@@ -420,8 +420,8 @@ public class Utility {
 
 	/*****************************************
 	 * Elapsed time
-	 *****************************************/
-	/*
+	 ******************************************/
+	/**
 	 * Function is written to find the elapsed time between starting time and
 	 * ennding time.
 	 *
@@ -454,7 +454,7 @@ public class Utility {
 	/*******************************************
 	 * Replace String
 	 *******************************************/
-	/*
+	/**
 	 * Function is written to replace the <<username>> from the given template.
 	 * board[0][0]='x'; board[0][0]='x';
 	 * 
@@ -478,7 +478,7 @@ public class Utility {
 	/************************************************
 	 * String Permutation
 	 ************************************************/
-	/*
+	/**
 	 * Function is written to find all permutation of a given String.
 	 *
 	 * @param inputString the String input to permute the String.
@@ -741,7 +741,7 @@ public class Utility {
 	/****************************************
 	 * Bubble Sort for String
 	 ****************************************/
-	/*
+	/**
 	 * Function is written to sort the string using bubble sort algorithm.
 	 * 
 	 * @param firstString to sort the the given string.
@@ -769,7 +769,7 @@ public class Utility {
 	/****************************************
 	 * Bubble Sort method for integer
 	 ****************************************/
-	/*
+	/**
 	 * Function is written to sort the integer array by using bubble sort algorithm.
 	 * 
 	 * @param a is integer array to sort the the given string.
@@ -792,7 +792,7 @@ public class Utility {
 	/****************************************
 	 * Match String
 	 ****************************************/
-	/*
+	/**
 	 * Function is written to match the two String
 	 * 
 	 * @param firstString and secondString to match both the string.
@@ -814,7 +814,7 @@ public class Utility {
 	/****************************************
 	 * Remove Space
 	 ****************************************/
-	/*
+	/**
 	 * Function is written to remove the spaces from the string.
 	 *
 	 * @param firstString to remove the space from the entered string.
@@ -832,7 +832,7 @@ public class Utility {
 	}
 
 	/****************************************************************/
-	/*
+	/**
 	 * Function is written to covert the String into Lower case.
 	 *
 	 * @param str is String to covert the entered String into Lower case .
@@ -855,7 +855,7 @@ public class Utility {
 	/****************************************
 	 * find Prime Number
 	 ****************************************/
-	/*
+	/**
 	 * Function is written to find the Prime Number
 	 *
 	 * @param a is integer to find the entered number is Prime or Not.
@@ -877,7 +877,7 @@ public class Utility {
 	/****************************************
 	 * check Palindrome
 	 ****************************************/
-	/*
+	/**
 	 * Function is written to find the number is Palindrome or Nt.
 	 *
 	 * @param num integer to find the number is Palindrome or Not.
@@ -902,7 +902,7 @@ public class Utility {
 	/****************************************
 	 * Insertion sort for integer
 	 ****************************************/
-	/*
+	/**
 	 * Function is written to perform the insertion sort on the integer array.
 	 *
 	 * @param a is array to sort the entered array.
@@ -930,7 +930,7 @@ public class Utility {
 	/****************************************
 	 * Insertion sort for String
 	 ****************************************/
-	/*
+	/**
 	 * Function is written to perform the insertion sort on the string array.
 	 *
 	 * @param enteredSTring is string array to sort the entered array.
@@ -962,7 +962,7 @@ public class Utility {
 	/****************************************
 	 * Binary Search for integer
 	 ****************************************/
-	/*
+	/**
 	 * Function is written to perform the binary search on integer array.
 	 *
 	 */
@@ -1013,7 +1013,7 @@ public class Utility {
 	/*************************************************
 	 * Convert Temperature
 	 **************************************************/
-	/*
+	/**
 	 * Function is written to convert the celsius into fahrenheit and vice versa.
 	 * 
 	 * @param celsius,fahrenheit is integer to get the input from user.
@@ -1029,7 +1029,7 @@ public class Utility {
 	/*************************************************
 	 * Newtons method to find square root
 	 *************************************************/
-	/*
+	/**
 	 * Function is written to find the square root of the entered number with the help of Newton method.
 	 * 
 	 * @param c is double the number to find the square root.
@@ -1050,7 +1050,7 @@ public class Utility {
 	/*************************************************
 	 * Guessing Number
 	 ****************************************************************************************/
-	/*
+	/**
 	 * Function is written to guess the number of user by Binary search algorithm.
 	 */
 	public static void guessNumber(int array[], int first, int last) {
@@ -1297,7 +1297,7 @@ public class Utility {
 	    }
 	 
 	 
-	 	/*
+	 	/**
 	     * Function to perform Merge Sort.
 	     * @param first index and highest index of an array.
 	     */
@@ -1353,7 +1353,7 @@ public class Utility {
 	            }
 	        }
 	        
-	        /*
+	        /**
 	         * this function check prime numbers are anagram or not
 	         * @param string1
 	         * @param string2
@@ -1373,7 +1373,7 @@ public class Utility {
 	                return false;
 	        }
 	        
-	        /*
+	        /**
 	         * this function is written to check whether entered String is Anagram or not.
 	         * @param firstString 
 	         * @param secondString
@@ -1397,7 +1397,7 @@ public class Utility {
 	    		}
 	        }
 	        
-	        /*
+	        /**
 	         * this function is written to find the number of binary search tree using catalan formula.
 	         * @param n is the integer which denotes the number of nodes.
 	         * @returntype n is the number of binary search tree of a given number of nodes..

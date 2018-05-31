@@ -23,5 +23,8 @@ public class CoupanNumber {
 		System.out.println("Enter the value of Distinct coupan numbers");
 	    int distinctCoupanNumber=Utility.getInt();
 		obj.generateCoupan(distinctCoupanNumber);
+		
+		
+	 
 	 }
 }
