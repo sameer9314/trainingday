@@ -37,15 +37,11 @@ public class DeckOfCards {
         placingCards(players,arrangedCards);
         displayArrangedCards(arrangedCards);
     }
-    
-    
     /**This method is written add to the cards to in the list.
      * @param players
      * @param arrangedCards
      */
     static void placingCards(String[][] players,MyLinkedList[] arrangedCards) {
-     
-     
       for(int i=0;i<4;i++)
       {
           arrangedCards[i]=new MyLinkedList();
@@ -56,7 +52,6 @@ public class DeckOfCards {
       }
       
      }
-            
     /**
      * This method is written to display cards after arrangement of cards according to the Ranks.
      * @param cardsArrangement
@@ -73,8 +68,6 @@ public class DeckOfCards {
               System.out.println();
         }
      }
-    
-
     /**
      * This method is written to suffle the cards.
      * @param cards
@@ -100,7 +93,6 @@ public class DeckOfCards {
         }
         return players;
        }
-    
     /**
      * This method is written to display the cards placed to the players.
      */

@@ -23,7 +23,6 @@ import java.util.Random;
 
 public class Utility {
 
-	// private constructor to create scanner object;
 	private static Scanner scnObj = null;
 
 	public Utility() {
@@ -252,7 +251,7 @@ public class Utility {
 	 * Function is written to generate one String.
 	 */
 	public static String getString() {
-		return scnObj.nextLine();
+		return scnObj.next();
 	}
 
 	/*****************************************

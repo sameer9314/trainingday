@@ -9,10 +9,12 @@ import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
 import org.json.simple.parser.ParseException;
 
+
 /**
  * Purpose : To create a JSON file having inventory details for Rice,Pulses and Wheats 
  * 			 with the properties name,weight,price per kg.	
  * @author : Sameer Saurabh
+ * @version : 1.0
  * @since  : 31/05/2018
  */
 public class InventoryDataManagement {
@@ -26,7 +28,7 @@ public class InventoryDataManagement {
 			Object b = parser.parse(new FileReader(
 					"/home/administrator/eclipse-workspace/Funtional_Programs/src/com/bridgLabz/oops/inventory.json"));
 			JSONObject obj = (JSONObject) b;
-
+			
 			JSONArray item;
 			System.out.print("[");
 			for (int i = 1; i <= 3; i++) {

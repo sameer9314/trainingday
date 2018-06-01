@@ -53,7 +53,9 @@ public class MyLinkedList {
 		}
 	}
 	public void displayln() {
-		//if(size()==0) {System.out.println("None");}
+		if(size()==0) {
+			System.out.println("None");
+			}
 		Node last= first;
 		for(int i=1;i<=size();i++) {
 			System.out.println(last.data+" ");
@@ -80,8 +82,8 @@ public class MyLinkedList {
 		return count;
 	}
 
-	public boolean search(Comparable item) {
-		Node last = first;
+	public boolean search(Comparable item){
+		Node last = first; 
 		while (last.next != null) {
 			if (last.data.compareTo(item) == 0) {
 				return true;}
@@ -119,7 +121,7 @@ public class MyLinkedList {
 	public void append(Comparable item) {
 		Node last=first;
 		while (last.next != null) {
-			last=last.next;
+				last=last.next;
 		}
 		last.next=new Node(item,last.next);
 		count++;
@@ -142,6 +144,7 @@ public class MyLinkedList {
 				}
 			}
 	}
+//	MyLinkedList l=MyLinkedList.list();
 
 	
 public Comparable pop(int pos) {
