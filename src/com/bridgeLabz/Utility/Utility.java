@@ -253,6 +253,13 @@ public class Utility {
 	public static String getString() {
 		return scnObj.next();
 	}
+	
+	/**
+	 * Function is written to generate one String.
+	 */
+	public static String getStringLine() {
+		return scnObj.nextLine();
+	}
 
 	/*****************************************
 	 * Generate one character value

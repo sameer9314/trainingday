@@ -13,7 +13,7 @@ import com.bridgeLabz.Utility.Utility;
  */
 public class InventoryManager {
 	public static void main(String[] args) {
-		Utility obj=new Utility();
+		new Utility();
 		InventoryFacotory.m();
 		System.out.println("Enter your choice to print the datails of an Object");
 		System.out.println("Enter 1 to print the details of Rice ");

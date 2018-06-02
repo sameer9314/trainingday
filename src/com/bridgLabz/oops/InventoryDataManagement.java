@@ -32,11 +32,12 @@ public class InventoryDataManagement {
 			JSONArray item;
 			System.out.print("[");
 			for (int i = 1; i <= 3; i++) {
-
-				if (i == 0) {
+				TotalWeight=0;
+				TotalPrice=0;
+				if (i == 1) {
 					item = (JSONArray) obj.get("Rice");
 					itemName = "Rice";
-				} else if (i == 1) {
+				} else if (i == 2) {
 					item = (JSONArray) obj.get("Pulses");
 					itemName = "Pulses";
 				} else {
