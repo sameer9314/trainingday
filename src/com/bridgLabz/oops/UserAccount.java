@@ -1,14 +1,15 @@
 package com.bridgLabz.oops;
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
+import org.json.simple.parser.ParseException;
 
 import com.bridgLabz.oops.StockAccount;
 
 public class UserAccount {
-	JSONArray userSharesObjectArray=new JSONArray();
+	static JSONArray userSharesObjectArray=new JSONArray();
 	String userName;
 	int amount=10000;
-	int shareCount=0;
+	int userTotalShare=0;
 	//int status;
 	StockAccount account;
 	UserAccount(String userName){
@@ -16,11 +17,16 @@ public class UserAccount {
 		account=new StockAccount(userName);
 	}
 	 @SuppressWarnings("static-access")
-	void transaction(JSONObject symbol) {
+	void transaction(JSONObject symbol) throws ParseException {
+		System.out.println("Displaying user details : ");
 		account.display();
-		account.buy(UserHandle.user.amount,symbol);
+		//System.out.println("Symbol is "+symbol);
+		//System.out.println("amount"+UserHandle.userObjectList[UserHandle.itemIndex].amount);
+		account.buy(UserHandle.userAccountList[UserHandle.itemIndex].amount,symbol);
 		System.out.println("User left amount "+amount);
-		account.userFileCreation(symbol);
+		
+		StockAccount.stockUpdate(UserHandle.userObjectList);
+//		account.userFileCreation(UserHandle.userObjectList[UserHandle.itemIndex].userName,symbol);
 		
 //		account.sell(amount,userName);
 //		account.save(fileName);

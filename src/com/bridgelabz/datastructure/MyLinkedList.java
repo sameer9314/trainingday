@@ -84,6 +84,8 @@ public class MyLinkedList {
 
 	public boolean search(Comparable item){
 		Node last = first; 
+		if(last==null) return false;
+		if(first.data.compareTo(item)==0) {return true;}
 		while (last.next != null) {
 			if (last.data.compareTo(item) == 0) {
 				return true;}
@@ -193,4 +195,27 @@ public Comparable pop() {
 public Comparable peek() {
 	return first.data;
 } 
+public Comparable get(int pos) {
+
+        if (pos == 0) {
+           
+            return first.data;
+        }
+        if(pos==1)
+        {
+            return first.next.data;
+        }
+        if (pos == size()) {
+            Node last = first;
+            for (int i = 1; i < size() - 1; i++) {
+                last = last.next;
+            }
+            return last.next.data;
+        }
+        Node last = first;
+        for (int i = 0; i < pos - 1; i++) {
+            last = last.next;
+        }
+        return last.next.data;
+    }
 }
