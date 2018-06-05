@@ -10,22 +10,22 @@ package com.bridgelabz.datastructure;
 public class QueueLinkedList {
 
 	MyLinkedList l=MyLinkedList.list();
-	static QueueLinkedList queue() {
+	public static QueueLinkedList queue() {
 		return new QueueLinkedList();
 	}
-	void enqueue(Comparable item) {
+	public void enqueue(Comparable item) {
 		l.add(item);
 	}
-	void display() {
-	l.display();
+	public void display() {
+	l.displayln();
 	}
-	Comparable dequeue() {
+	public Comparable dequeue() {
 		return(l.pop(0));
 	}
-	int size() {
+	public int size() {
 		return l.size();
 	}
-	boolean isEmpty() {
+	public boolean isEmpty() {
 		return l.isEmpty();
 	}
 	

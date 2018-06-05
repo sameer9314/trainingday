@@ -9,25 +9,25 @@ package com.bridgelabz.datastructure;
 ******************************************************************************/
 public class StackLinkedList {
 	MyLinkedList l=MyLinkedList.list();
-	static StackLinkedList stack(){
+	public static StackLinkedList stack(){
 		return new StackLinkedList();
 	} 
 	
-	void push(Comparable item){
+	public void push(Comparable item){
 	l.insert(item,0);
 	}
 	Comparable pop(){
 		return l.pop(0);
 	}
 	
-	void display(){
-		l.display();
+	public void display(){
+		l.displayln();
 		}
 	
-	Comparable peek(){
+	public Comparable peek(){
 		return l.peek();
 	}
-	boolean isEmpty(){
+	public boolean isEmpty(){
 	return l.isEmpty();
 	} 
 	int size(){

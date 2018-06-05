@@ -45,7 +45,7 @@ public class MyLinkedList {
 		count++;
 	}
 	public void display() {
-		//if(size()==0) {System.out.println("None");}
+		if(size()==0) {System.out.println("None");}
 		Node last= first;
 		for(int i=1;i<=size();i++) {
 			System.out.print(last.data+" ");
@@ -147,7 +147,25 @@ public class MyLinkedList {
 			}
 	}
 //	MyLinkedList l=MyLinkedList.list();
-
+	
+	public Comparable removeAt(int index) {
+        if (index == 0) {
+        	Comparable   temp = first.data;
+        	first =  first.next;
+            count--;
+            return temp;
+        }
+        Node t = first;
+        int counts = 0;
+        while (counts < index - 1) {
+            t = t.next;
+            counts++;
+        }
+        Comparable temp = t.next.data;
+        t.next = t.next.next;
+        count--;
+        return temp;
+    }
 	
 public Comparable pop(int pos) {
 	
