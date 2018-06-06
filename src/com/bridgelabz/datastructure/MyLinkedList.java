@@ -7,7 +7,7 @@ package com.bridgelabz.datastructure;
 *  @since   26-05-2018
 *
 ******************************************************************************/
-public class MyLinkedList {
+public class MyLinkedList  {
 	private Node first;
 	int count;
 	

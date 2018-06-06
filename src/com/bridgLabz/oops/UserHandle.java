@@ -24,15 +24,11 @@ public class UserHandle {
 	static JSONArray jsonArray;
 	static int choice;
 
-	// static int stock;
 	public static void main(String[] args) throws ParseException {
 		new Utility();
 		JSONParser parser = new JSONParser();
 		JSONObject ob = null;
 		int index = 0;
-		// ob=(JSONObject)(new
-		// JSONParser().parse(StockAccount.objectCreation().toString()));
-		// System.out.println(stock);
 		boolean applicationStatus = true;
 		while (applicationStatus == true) {
 			System.out.println("Enter your name");
@@ -50,7 +46,6 @@ public class UserHandle {
 
 				userAccountList[itemIndex] = new UserAccount(userName);
 				index++;
-				System.out.println(UserHandle.userObjectList.size());
 				for (int i = 0; i < 3; i++) {
 					UserHandle.userAccountList[UserHandle.itemIndex].eachComopanyShareList.insert(0, i);
 				}
