@@ -45,7 +45,7 @@ public class MyLinkedList  {
 		count++;
 	}
 	public void display() {
-		if(size()==0) {System.out.println("None");}
+	//	if(size()==0) {System.out.println("None");}
 		Node last= first;
 		for(int i=1;i<=size();i++) {
 			System.out.print(last.data+" ");

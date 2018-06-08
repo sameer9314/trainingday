@@ -25,6 +25,4 @@ public class NumberOfBST {
 			System.out.println(array[i]);
 		}
 	}
-	
-	
 }

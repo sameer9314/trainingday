@@ -14,52 +14,50 @@ Utility obj=new Utility();
 public String getFirstName() {
 	return firstName;
 }
-public void setFirstName() {
-	System.out.println(" Enter your first name ");
+public void setFirstName(String firstName) {
 	
-	firstName=Utility.getString();
+	this.firstName=firstName;
 }
 public String getLastName() {
 	return lastName;
 }
-public void setLastName() {
-	System.out.println(" Enter your last name ");
-	lastName=Utility.getString();
+public void setLastName(String lastName) {
+	this.lastName=lastName;
 }
 public String getAddress() {
 	return address;
 }
-public void setAddress() {
-	System.out.println(" Enter your address");
-	address=Utility.getString();
+public void setAddress(String address) {
+//	System.out.println(" Enter your address");
+	this.address=address;
 }
 public String getCity() {
 	return city;
 }
-public void setCity() {
-	System.out.println(" Enter your city ");
-	city=Utility.getString();
+public void setCity(String city) {
+	//System.out.println(" Enter your city ");
+	this.city=city;
 }
 public String getState() {
 	return state;
 }
-public void setState() {
-	System.out.println(" Enter your State ");
-	state=Utility.getString();
+public void setState(String state) {
+	//System.out.println(" Enter your State ");
+	this.state=state;
 }
 public String getZip() {
 	return zip;
 }
-public void setZip() {
-	System.out.println(" Enter your zip code ");
-	zip=Utility.getString();
+public void setZip(String zip) {
+	//System.out.println(" Enter your zip code ");
+	this.zip=zip;
 }
 public String getPhoneNumber() {
 	return phoneNumber;
 }
-public void setPhoneNumber() {
-	System.out.println(" Enter your phone number");
-	phoneNumber=Utility.getString();
+public void setPhoneNumber(String phoneNumber) {
+	//System.out.println(" Enter your phone number");
+	this.phoneNumber=phoneNumber;
 }
 
 }

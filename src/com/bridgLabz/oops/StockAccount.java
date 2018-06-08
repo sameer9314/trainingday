@@ -17,7 +17,12 @@ import com.bridgeLabz.Utility.Utility;
 import com.bridgelabz.datastructure.MyLinkedList;
 import com.bridgelabz.datastructure.QueueLinkedList;
 import com.bridgelabz.datastructure.StackLinkedList;
-
+/**
+ * Purpose : To perform the buy and sell operations and to get the available stock and upadte the stock account.
+ * @author : Sameer Saurabh
+ * @version : 1.0
+ * @since : 1/06/2018
+ */
 public class StockAccount {
 	static File f;
 	static String regfileName = "";

@@ -11,7 +11,12 @@ import org.json.simple.parser.ParseException;
 
 import com.bridgeLabz.Utility.Utility;
 import com.bridgelabz.datastructure.*;
-
+/**
+ * Purpose : To get the user information and validate the user name and accessing the stock account .
+ * @author : Sameer Saurabh
+ * @version : 1.0
+ * @since : 1/06/2018
+ */
 public class UserHandle {
 	@SuppressWarnings("static-access")
 	static UserAccount user;

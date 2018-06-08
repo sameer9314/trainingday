@@ -8,6 +8,12 @@ import com.bridgLabz.oops.StockAccount;
 import com.bridgeLabz.Utility.Utility;
 import com.bridgelabz.datastructure.MyLinkedList;
 
+/**
+ * Purpose : To handle user to perform the buy and sell operations in stock account.
+ * @author : Sameer Saurabh
+ * @version : 1.0
+ * @since : 1/06/2018
+ */
 public class UserAccount {
 	static JSONArray userSharesObjectArray = new JSONArray();
 	String userName;

@@ -866,7 +866,7 @@ public class Utility {
 	 *
 	 * @param a is integer to find the entered number is Prime or Not.
 	 * 
-	 * @returntype true id number is Prime pr false if number is Not Prime.
+	 * @returntype true id number is Prime  false if number is Not Prime.
 	 */
 	public static boolean findPrimenNumber(int a) {
 		if (a == 0 || a == 1) {
