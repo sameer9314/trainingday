@@ -241,7 +241,15 @@ public class Utility {
 	 * Function is written to generate one integer number.
 	 */
 	public static int getInt() {
-		return scnObj.nextInt();
+		try {
+			int number = scnObj.nextInt();
+			return number;
+		}catch(Exception e) {
+			scnObj.nextLine();
+			System.out.println("Invalid type of Input, must be integer Please try again... ");
+			return getInt();
+		}
+		
 	}
 
 	/****************************************

@@ -2,16 +2,11 @@ package com.bridgelabz.simpleaddressbook;
 
 import java.io.BufferedWriter;
 import java.io.File;
-import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
-import java.util.ArrayList;
 import java.util.LinkedList;
-
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
-import org.json.simple.parser.JSONParser;
-
 import com.bridgeLabz.Utility.Utility;
 import com.bridgelabz.datastructure.MyLinkedList;
 
@@ -21,8 +16,6 @@ public class AddressBookManager {
 	@SuppressWarnings({ "unchecked", "unused", "rawtypes" })
 	static LinkedList<AddressBook> addressBookList = new <AddressBook>LinkedList();
 	static MyLinkedList addressBookNameList=new MyLinkedList();
-	//@SuppressWarnings("rawtypes")
-//	static LinkedList jsonObjectaddressBookPeopleList=new LinkedList();
 /********************************************************************************************/	
 	@SuppressWarnings("static-access")
 	static void createNewAddressBook() {
@@ -72,14 +65,11 @@ public class AddressBookManager {
 		
 		ar.add(ob);
 		}
-		//AddressBookManager.createJsonObject(index);
 		System.out.println("Saving "+addressBookName+"...");
-		//System.out.println(((JSONArray) jsonObjectaddressBookPeopleList.get(index-1)));
 		File f = new File("/home/administrator/eclipse-workspace/Funtional_Programs/src/com/bridgelabz/simpleaddressbook/"+addressBookName+".json");
 		try {
 			System.out.println(f.createNewFile());
 			BufferedWriter bufferedwriter = new BufferedWriter(new FileWriter(f));
-			//bufferedwriter.write(((JSONArray) jsonObjectaddressBookPeopleList.get(index-1)).toString());
 			bufferedwriter.write(ar.toString());
 			bufferedwriter.close();
 			System.out.println(addressBookName+"File updated succesfully");
@@ -89,13 +79,7 @@ public class AddressBookManager {
 		
 		}
 	}
-
-/**********************************************************************************************/
-	static void saveAddressBookAs() {
-	}
-/**********************************************************************************************/
-	static void closeAddressBook() {
-	}
+	
 /**********************************************************************************************/
 	static void quitAddressBook() {
 		String addressBookName="";
